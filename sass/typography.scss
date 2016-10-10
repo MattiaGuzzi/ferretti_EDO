@@ -1,0 +1,174 @@
+$main_font: "sofia-pro", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$secondary_font: "museo-regular", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$main_font_size: 16px;
+
+$letter-spacing: 0.2em;
+$letter-spacing-paragraph: 0.15em;
+$letter-spacing-btn: 0.25em;
+
+$main_color: #262626;
+$blue: #002a50;
+$light_blue: #0086ff;
+$dark_grey: #595959;
+$grey: #999999;
+$light_grey: #acacac;
+
+$interline: 2em;
+
+body {
+  font-size: 13px;
+  @include breakpoint(#{em(800px)}) {
+    font-size: 14px;
+  }
+  @include breakpoint(#{em(1280px)}) {
+    font-size: $main_font_size;
+  }
+  font-family: $main_font;
+
+  color: $main_color;
+}
+
+
+.label_pappoc {
+  color: $light_blue;
+  text-transform: uppercase;
+}
+
+
+.hashtag {
+  color: $light_blue;
+  letter-spacing: $letter-spacing-paragraph;
+  text-transform: uppercase;
+  line-height: $interline;
+}
+
+.quote {
+  font-style: italic;
+  font-family: $secondary_font;
+  line-height: $interline;
+  letter-spacing: $letter-spacing-paragraph;
+  color: $dark_grey;
+}
+
+.name {
+  color: $blue;
+  letter-spacing: $letter-spacing-paragraph;
+  text-transform: uppercase;
+
+}
+
+.number_servizi {
+  color: $light_grey;
+  letter-spacing: $letter-spacing-paragraph;
+  font-weight: 100;
+}
+
+.star {
+  color: $light_blue;
+}
+
+.text_intestazione {
+  font-family: $secondary_font;
+  font-size: 0.625em;
+  line-height: $interline;
+  letter-spacing: $letter-spacing-paragraph;
+  color: $grey;
+
+  &.cookie {
+    color: $blue;
+    text-transform: uppercase;
+  }
+}
+
+.footer_text {
+  font-family: $secondary_font;
+  font-size: 0.750em;
+  line-height: $interline;
+  letter-spacing: $letter-spacing-paragraph;
+  color: $dark_grey;
+  width: 100%;
+}
+
+.font_thin {
+  font-weight: 100;
+}
+
+.font_medium{
+  font-weight: 400!important;
+}
+.font_bold, strong {
+  font-weight: 600!important;
+}
+
+.font_lowercase {
+  text-transform: lowercase;
+}
+.font_uppercase {
+  text-transform: uppercase;
+}
+.font_capitalize {
+  text-transform: capitalize;
+}
+
+.font_spacing_paragraph {
+  letter-spacing: $letter-spacing-paragraph!important;
+}
+
+.font_spacing_btn {
+  letter-spacing: $letter-spacing-btn;
+}
+
+.font_spacing {
+  letter-spacing: $letter-spacing;
+}
+
+.second_font_100 {
+  font-family: $secondary_font;
+  font-weight: 100;
+}
+
+.second_font_200 {
+  font-family: $secondary_font;
+  font-weight: 200;
+}
+
+.second_font {
+  font-family: $secondary_font;
+  font-weight: 400;
+}
+
+.second_font_500 {
+  font-family: $secondary_font;
+  font-weight: 500;
+}
+
+.second_font_600 {
+  font-family: $secondary_font;
+  font-weight: 600;
+}
+
+.blue {
+  color: $blue!important;
+}
+
+.light_blue {
+  color: $light_blue!important;
+}
+
+.dark_grey {
+  color: $dark_grey!important;
+}
+
+.grey {
+  color: $grey!important;
+}
+
+.light_grey {
+  color: $light_grey!important;
+}
+
+.white {
+  color: white !important;
+}
+
+

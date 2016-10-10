@@ -1,0 +1,139 @@
+/*
+
+<div class="frt_img nocanvas flip reverse medium" style="width: 40%">
+    <div class="frt_img_wrapper medium reverse">
+        <img src="img/test.png"/>
+    </div>
+</div>
+
+
+*/
+
+
+
+
+
+$frt_img_canvas_size: 10px;
+$frt_img_big_canvas_size: 30px;
+
+.frt_img{
+  background-image: url("../img/strips.png");
+  line-height: 0px;
+
+  &.reverse{
+    background-image: url("../img/rev_strips.png");
+    &.medium{
+      background-image: url("../img/rev_strips_medium.png");
+    }
+  }
+
+  &.medium{
+    background-image: url("../img/strips_medium.png");
+  }
+
+
+
+
+  .frt_img_wrapper{
+    position: relative;
+
+    &:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/strips.png");
+      top: $frt_img_canvas_size * (-1);
+      left: $frt_img_canvas_size;
+    }
+
+    &.reverse:after{
+      background-image: url("../img/rev_strips.png");
+    }
+
+    &.medium:after{
+      background-image: url("../img/strips_medium.png");
+    }
+
+    &.medium.reverse:after{
+      background-image: url("../img/rev_strips_medium.png");
+    }
+
+    &.no_filter:after{
+      background-image: none;
+
+    }
+
+    img{
+      border: none;
+      margin: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      top: $frt_img_canvas_size * (-1);
+      left: $frt_img_canvas_size;
+    }
+  }
+
+
+
+
+  &.nocanvas{
+    background-image: none !important;
+    .frt_img_wrapper {
+
+      &:after {
+        top: 0px !important;
+        left: 0px !important;
+      }
+
+      img {
+        top: 0px !important;
+        left: 0px !important;
+      }
+    }
+  }
+
+
+  &.bigcanvas{
+
+    .frt_img_wrapper {
+
+      &:after {
+        top: $frt_img_big_canvas_size * (-1);
+        left: $frt_img_big_canvas_size;
+      }
+
+      img {
+        top: $frt_img_big_canvas_size * (-1);
+        left: $frt_img_big_canvas_size;
+      }
+    }
+
+    &.flip{
+      .frt_img_wrapper{
+
+        img{
+          left: $frt_img_big_canvas_size * (-1) !important;
+        }
+      }
+
+    }
+  }
+
+
+  &.flip{
+    .frt_img_wrapper{
+      &:after{
+
+        left: $frt_img_canvas_size * (-1);
+      }
+      img{
+
+        left: $frt_img_canvas_size * (-1);
+      }
+    }
+  }
+
+}
+

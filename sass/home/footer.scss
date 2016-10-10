@@ -1,0 +1,41 @@
+$width_label: 20.375em;
+$width_tel:  9.375em;
+$width_email: 14.375em;
+$width_chiudi: 12.375em;
+
+.container_footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 3.125em;
+  z-index: 999999;
+  .footer_wrapper {
+    background-color: rgb(252,255,255);
+    @include cols();
+
+    .aiuto_footer {
+      @include cell();
+      width: $width_label;
+    }
+    .tel_footer {
+      @include cell();
+      width: $width_tel;
+    }
+    .email_footer {
+      @include cell();
+      width: $width_email;
+    }
+    .flex_footer {
+      @include flex();
+    }
+    .chiudi_footer {
+      @include cell();
+      width: $width_chiudi;
+
+      .chiudi{
+        text-align: right;
+      }
+    }
+  }
+
+}

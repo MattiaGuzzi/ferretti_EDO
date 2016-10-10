@@ -1,0 +1,63 @@
+
+
+
+.frt_guarda_pragraph{
+  margin-bottom: 5em;
+  position: relative;
+
+  .frt_img{
+    width: 56%;
+    position: relative;
+    left: 42%;
+    z-index: 22;
+  }
+
+
+
+  .info{
+    position: absolute;
+    width: 30%;
+    left: 3em;
+    bottom: 15em;
+
+    .info_title{
+      text-transform: uppercase;
+    }
+
+
+
+  }
+
+
+
+  &.flipped{
+    .frt_img{
+      left: 0px !important;
+    }
+
+    .info{
+      right: 3em !important;
+      left: inherit;
+    }
+
+
+    .dotted_line{
+
+      .frt_btn_wrapper{
+        top: -2em;
+        right: 14em;
+        position: absolute;
+        left: inherit;
+
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+}

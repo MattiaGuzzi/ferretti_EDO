@@ -1,0 +1,31 @@
+.search_row {
+  @include flex();
+  padding-top: 3em;
+
+
+  .frt_form{
+
+    width: 52em;
+    margin: 0px auto;
+    overflow: auto;
+
+
+    .frt_form_row{
+
+      float: left;
+
+
+      .frt_form_input{
+        margin: 5px 10px !important;
+        .frt_input{
+          width: 24em !important;
+          letter-spacing: 0.1em;
+        }
+      }
+
+    }
+  }
+
+
+
+}

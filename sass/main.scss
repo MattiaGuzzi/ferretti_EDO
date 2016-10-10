@@ -1,0 +1,112 @@
+@import "compass";
+@import "vars";
+@import "lib/_normalize";
+@import "lib/mediaquery";
+@import "lib/grid";
+@import "lib/flexScaffolding";
+@import "function";
+
+
+@import "typography.scss";
+
+
+/* HOME PAGE */
+@import "home/site";
+@import "home/header";
+@import "home/slider";
+@import "home/intro";
+@import "home/mission";
+@import "home/realizzazioni";
+@import "home/footer";
+
+@import "menu.scss";
+@import "home/carousel";
+@import "home/arredamenti";
+@import "home/frasi";
+@import "home/servizi";
+@import "home/opinioni";
+@import "home/intestazione";
+@import "contact";
+@import "search";
+
+
+/* ARCHIVI PAGE */
+
+@import "archivi/archivi_page";
+@import "archivi/archivi_top";
+@import "archivi/archivi_presentazione";
+@import "archivi/in_costruzione";
+
+/* CHI SIAMO PAGE */
+@import "chi_siamo/chi_siamo_page.scss";
+@import "chi_siamo/chi_siamo_top.scss";
+@import "chi_siamo/storia.scss";
+@import "chi_siamo/famiglia";
+@import "chi_siamo/valori";
+@import "chi_siamo/noixvoi";
+
+/* CANTIERE IN COSTRUZIONE PAGE */
+@import "cantieri_in_costruzione/cantieri_page";
+@import "cantieri_in_costruzione/cantieri_top";
+@import "cantieri_in_costruzione/descrizione_cantieri";
+@import "cantieri_in_costruzione/caratteristiche_cantieri";
+@import "cantieri_in_costruzione/carousel_cantieri";
+@import "cantieri_in_costruzione/soluzioni_button";
+
+
+/* APPARTAMENTI IN VENDITA PAGE */
+@import "appartamenti_in_vendita/app_in_vendita_page.scss";
+@import "appartamenti_in_vendita/sub_header.scss";
+@import "appartamenti_in_vendita/slider_app_in_vendita.scss";
+@import "appartamenti_in_vendita/descrizione_appartamenti.scss";
+@import "appartamenti_in_vendita/gallery_appartamento.scss";
+@import "appartamenti_in_vendita/pubblicita_appartamenti.scss";
+@import "appartamenti_in_vendita/appuntamento_btn.scss";
+@import "appartamenti_in_vendita/immobili_simili";
+
+
+/* ARREDAMENTI PAGE */
+@import "arredamenti/arredamenti_page";
+@import "arredamenti/arredamenti_top";
+@import "arredamenti/arredamenti_paragraph.scss";
+@import "arredamenti/arredamenti_gallery.scss";
+@import "arredamenti/preventivo_btn.scss";
+@import "arredamenti/marchi.scss";
+@import "arredamenti/showroom.scss";
+
+
+/* BLOG PAGE */
+@import "blog/blog_page";
+@import "blog/schedules";
+
+/* BLOG CATEGORIA PAGE */
+@import "blog_categoria/blog_categoria_pages";
+@import "blog_categoria/blog_categoria_top";
+
+/* BLOG ARTICOLO PAGE */
+@import "blog_articolo/blog_articolo_page";
+@import "blog_articolo/blog_articolo_top";
+
+
+
+
+
+@import "frt_modules/frt_button";
+@import "frt_modules/frt_paragraph";
+@import "frt_modules/frt_images";
+@import "frt_modules/frt_guarda_paragraph";
+@import "frt_modules/frt_mediaObject";
+
+
+@import "frt_modules/frt_pappoc";
+@import "frt_modules/frt_corner";
+@import "frt_modules/dotted_line";
+@import "frt_modules/frt_form";
+@import "frt_modules/frt_plus";
+
+
+@import "frt_modules/frt_maps";
+@import "frt_modules/frt_instagram";
+
+
+

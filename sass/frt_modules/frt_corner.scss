@@ -1,0 +1,59 @@
+$corner_border:3px solid #262626;
+
+
+
+.corner{
+  width:100%;
+  position: relative;
+  padding: em(40px);
+
+  @include breakpoint(800px){
+    padding: em(80px);
+  }
+
+
+  &:after{
+    content: "";
+    width: em(30px);
+    height: em(30px);
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-top: $corner_border;
+    border-left:$corner_border;
+  }
+  &:before{
+    content: "";
+    width: em(30px);
+    height: em(30px);
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-right: $corner_border;
+    border-bottom:$corner_border;
+
+  }
+  &.white{
+    &:after {
+      border-top: 3px solid white;
+      border-left: 3px solid white;
+    }
+    &:before {
+      border-right: 3px solid white;
+      border-bottom: 3px solid white;
+    }
+  }
+}
+.fr_corner_content {
+  @include breakpoint(1366px) {
+    width: 1366px/$golden-ratio;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}
