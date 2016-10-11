@@ -1,0 +1,20 @@
+$first_percent:61.803398874985468379271708299583%;
+$second_percent:38.196601125014531620728291700417%;
+
+.frt_columns{
+  display: flex;
+  flex-wrap: wrap;
+
+  .cols_60{
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: $first_percent;
+  }
+  .cols_40{
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: $second_percent;
+  }
+}

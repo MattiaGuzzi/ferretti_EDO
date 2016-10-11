@@ -1,10 +1,9 @@
 
 .container_nav_cantieri {
   width: 70%;
-  height: 75%;
 
   .corner {
-    height: 100%;
+
 
     .nav_cantieri_wrapper {
       @include cols();
@@ -19,7 +18,6 @@
         .body_cantieri {
           position: relative;
           width: 89%;
-          height: 70%;
 
           .carousel_title{
             float: right;

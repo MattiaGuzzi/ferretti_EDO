@@ -1,17 +1,18 @@
 
 
 $width_pappoc:2.188em;
-$height_pappoc:0.938em;
+$height_pappoc:1.6em;
 $color_pappoc: #252525;
 /*$font_pappoc:12px Arial, sans-serif;*/
 
 
 
 .frt_pappoc {
+  height: auto;
   .pappoc_round {
     position: relative;
     width: $width_pappoc;
-    height: $height_pappoc;
+    height: auto;
     z-index: 1;
     float: left;
 

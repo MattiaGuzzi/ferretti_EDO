@@ -5,11 +5,10 @@
 
   .container_opinioni_header{
     @include cell();
-    height:12.500em;
+
 
 
     .box_title_opinioni{
-      height:0px;
       .title_opinioni{
         text-align: center;
       }
@@ -19,17 +18,13 @@
 
   .container_opinioni_body{
     @include cell();
-    height:25.625em;
-
-
 
 
     .container_nav_opinioni{
       width:50.000em;
-      height:24.063em;
+
 
       .corner{
-        height: 100%;
 
         .nav_opinioni_wrapper{
           @include cols();
@@ -43,18 +38,17 @@
 
             .body_opinioni{
               width:23.438em;
-              height: 7.188em;
+
 
               .opinioni_img{
                 position: relative;
                 float: left;
                 width:29.3%;
-                height:100%;
 
 
                 .container_img_op{
                   width: 90%;
-                  height: 90%;
+
                   border: 2px solid black;
                 }
               }
@@ -62,7 +56,7 @@
                 position: relative;
                 float: left;
                 width:69%;
-                height:100%;
+
 
                 .container_name_star{
                   width: 65%;

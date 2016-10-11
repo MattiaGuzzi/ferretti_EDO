@@ -10,13 +10,11 @@
   bottom: -3.750em;
 
   .container_grid{
-    height:8.125em;
     .wrapper_grid{
       @include rows(jus-center);
 
       .row_pub{
         @include cell();
-        height:4.063em;
 
 
         .wrapper_col_grid{

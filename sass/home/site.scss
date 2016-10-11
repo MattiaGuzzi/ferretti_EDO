@@ -9,43 +9,42 @@ $height_header: 5.375em;
 
 /* SLIDER VARIABLE */
 $width_slider: 100%;
-$height_slider: auto;
+
 
 /* INTRO VARIABLE */
 $width_intro: 100%;
-$height_intro: 32em;
+
 
 /* MISSION VARIABLE */
 $width_mission: 100%;
-$height_mission: 50em;
+
 
 /* CAROUSEL VARIABLE */
 $width_carousel: 100%;
-$height_carousel: 46.250em;
+
 
 /* ARREDAMENTI VARIABLE */
 $width_arredamenti: 100%;
-$height_arredamenti: auto;
+
 
 /* FRASI VARIABLE */
 $width_frasi: 100%;
-$height_frasi: 48.125em;
+
 
 /* SERVIZI VARIABLE */
 $width_servizi: 100%;
-$height_servizi: auto;
+
 
 /* OPINIONI VARIABLE */
 $width_opinioni: 100%;
-$height_opinioni: 50em;
+
 
 /* REALIZZAZIONI VARIABLE */
 $width_realizzazioni: 100%;
-$height_realizzazioni: auto;
+
 
 /* INTESTAZIONE VARIABLE */
 $width_intestazione:100%;
-$height_intestazione:3.750em;
 
 /* FOOTER VARIABLE */
 $height_footer: 3.125em;
@@ -59,25 +58,21 @@ $height_footer: 3.125em;
   .slider {
     position: relative;
     width: $width_slider;
-    height: $height_slider;
     @extend .section;
   }
   .intro {
     position: relative;
     width: $width_intro;
-    height: $height_intro;
   }
   .mission {
     position: relative;
     width: $width_mission;
-    height: $height_mission;
 
     .container_mission {
       .content_bubble {
         z-index: 2;
         position: absolute;
         width: 30.625em;
-        height: 19.688em;
         top: 15.750em;
         right:5%;
       }
@@ -87,38 +82,32 @@ $height_footer: 3.125em;
   .carousel {
     position: relative;
     width: $width_carousel;
-    height: $height_carousel;
+    height: 46.25em;
   }
   .arredamenti {
     position: relative;
     width: $width_arredamenti;
-    height: $height_arredamenti;
   }
 
   .frasi {
     position: relative;
     width: $width_frasi;
-    height: $height_frasi;
   }
   .servizi {
     position: relative;
     width: $width_servizi;
-    height: $height_servizi;
   }
   .opinioni {
     position: relative;
     width: $width_opinioni;
-    height: $height_opinioni;
   }
-  #realizzazioni {
+  .realizzazioni {
     position: relative;
     width: $width_realizzazioni;
-    height: $height_realizzazioni;
   }
-  #intestazione{
+  .intestazione{
     position: relative;
     width: $width_intestazione;
-    height: $height_intestazione;
   }
   .footer {
     position: relative;
@@ -135,7 +124,6 @@ $height_footer: 3.125em;
 .container_section {
   max-width: $width_max_site;
   margin: 0 auto;
-  height: 100%;
 }
 
 

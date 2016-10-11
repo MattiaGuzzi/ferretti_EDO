@@ -13,18 +13,17 @@ $width_storia_right:59%;
       width:90%;
 
       .container_text{
-        height: 17.750em;
         .frt_title, .frt_subtitle{
           letter-spacing: 0.1em;
         }
 
         .subtitle_bottom{
-          position: absolute;
+          position: relative;
           bottom: 3.063em;
         }
         .title_bottom{
 
-          position: absolute;
+          position: relative;
           bottom: 1.563em
         }
       }
