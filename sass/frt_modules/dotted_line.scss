@@ -12,20 +12,11 @@
 
 
 .dotted_line {
-  /*position: absolute;
-  left: 0;
-  top:50%;
-  width:100%;
-  height:$border_h;
-  background: linear-gradient(to left, #262626 9px, transparent 0, transparent calc(50% - 9px), #262626 0, #262626 calc(50% + 9px), transparent 0, transparent calc(100% - 9px), #262626 0);
-  background-size:  42px 100%;
-  z-index:0;
-  transform: translate3d(0,-50%,0);*/
   position: absolute;
   left: 0;
   top:50%;
   width:100%;
-  z-index:0;
+  z-index:-1;
   height: $border_h;
   @include dash(18px, 6px, #262626);
 

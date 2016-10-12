@@ -15,8 +15,7 @@
 $frt_img_padding: 1.9em 2.5em;
 $frt_img_canvas_size: 10px;
 $frt_img_big_canvas_size: 30px;
-.frt_img_padding {
-  padding: $frt_img_padding;
+
   .frt_img {
     background-image: url("../img/strips.png");
     line-height: 0px;
@@ -129,7 +128,7 @@ $frt_img_big_canvas_size: 30px;
     }
 
   }
-}
+
 
 .frt_img_cover{
   position: relative;

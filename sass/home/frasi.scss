@@ -14,7 +14,7 @@
         width:4.375em;
       }
       .container_frasi{
-        @include flex();
+        @include cell();
 
         .body_frasi{
           width: 89%;
