@@ -53,6 +53,7 @@ $height_footer: 3.125em;
 .wrapper {
   max-width: $width_max_site;
   margin: 0 auto;
+  overflow: hidden;
 
 
   .slider {

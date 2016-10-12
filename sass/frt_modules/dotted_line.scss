@@ -36,3 +36,48 @@
     top: 0%;
   }
 }
+
+/*
+.dashed_line {
+  !*position: absolute;
+  left: 0;
+  top:50%;
+  width:100%;
+  height:$border_h;
+  background: linear-gradient(to left, #262626 9px, transparent 0, transparent calc(50% - 9px), #262626 0, #262626 calc(50% + 9px), transparent 0, transparent calc(100% - 9px), #262626 0);
+  background-size:  42px 100%;
+  z-index:0;
+  transform: translate3d(0,-50%,0);*!
+  z-index:0;
+  height: $border_h;
+  position: absolute;
+  left: 0;
+  top:50%;
+  width:100%;
+  &.bottom {
+    top: 99%;
+  }
+  &.top {
+    top: 0%;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    @include dash(18px, 6px, #262626);
+  }
+  &.dashed_line_in_col {
+    &:before {
+      width: 100vw;
+      left: 0;
+    }
+    &.right {
+      &:before {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}*/

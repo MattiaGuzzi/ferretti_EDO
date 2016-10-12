@@ -1,0 +1,25 @@
+
+.container_single_service{
+  .frt_img_cover{
+    position: absolute;
+  }
+
+  .frt_title{
+    text-align: center;
+    font-size: em(48px);
+  }
+  .content_btn_bubble {
+    position: relative;
+    width: 49.688em;
+    margin: 0 auto;
+    transform: translate3d(0%, 10%, 0);
+    .content_bubble_arredamenti {
+      .container_button{
+        position: absolute;
+        left:50%;
+        bottom:0;
+        transform: translate3d(-50%, 50%, 0);
+      }
+    }
+  }
+}

@@ -25,9 +25,7 @@ $interline_title:1.5em;
     left:$frt_paragraph_2nd_border_thickness;
     width: 100%;
 
-    .frt_paragraph_content{
-      padding: $frt_paragraph_padding;
-    }
+
   }
 
 
@@ -79,13 +77,6 @@ $interline_title:1.5em;
       }
     }
   }
-
-
-
-
-
-
-
 }
 
 
@@ -123,7 +114,9 @@ $interline_title:1.5em;
   }
 }
 
-
+.frt_paragraph_content{
+  padding: $frt_paragraph_padding;
+}
 
 
 

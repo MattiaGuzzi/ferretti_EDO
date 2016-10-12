@@ -4,6 +4,7 @@ $second_percent:38.196601125014531620728291700417%;
 .frt_columns{
   display: flex;
   flex-wrap: wrap;
+  width:100%;
 
   .cols_60{
     display: flex;
@@ -17,4 +18,17 @@ $second_percent:38.196601125014531620728291700417%;
     flex: 0 0 auto;
     width: $second_percent;
   }
+  .cols_50{
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+.padding_20_0{
+  padding: em(20px) 0;
+}
+.padding_40{
+  padding: em(40px);
 }
