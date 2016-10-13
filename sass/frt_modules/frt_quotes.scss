@@ -1,0 +1,51 @@
+
+.frt_quotes{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .corner{
+    position: relative;
+
+    ul{
+      display: flex;
+      padding: em(40px) 0;
+      /* niente flex-wrap */
+      align-items: center;
+
+      @include breakpoint(800px){
+        padding: em(80px) 0;
+      }
+    }
+
+    li{
+      width: 100%;
+      flex:0 0 auto;
+
+      .container_quote{
+        width: 684px;
+        position: relative;
+
+        .quote-text{
+          visibility: hidden;
+          opacity:0;
+          transition: 0.5s;
+        }
+        .avatar, .frt_review{
+          position:absolute;
+          max-width: 100%;
+          left:50%;
+          top:50%;
+          transform: translate3d(50%, -50%, 0);
+        }
+
+
+      }
+    :hover{
+      transition: 0.5s;
+      opacity: 0;
+      visibility: hidden;
+    }
+    }
+  }
+}

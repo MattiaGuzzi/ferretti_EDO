@@ -1,82 +1,38 @@
 
 
-.opinioni_wrapper{
-  @include rows();
+.container_opinioni {
+      @include flex();
 
-  .container_opinioni_header{
-    @include cell();
+      .body_opinioni {
+        width: 23.438em;
 
+        .opinioni_img {
+          position: relative;
+          float: left;
+          width: 29.3%;
 
+          .container_img_op {
+            width: 90%;
 
-    .box_title_opinioni{
-      .title_opinioni{
-        text-align: center;
-      }
-
-    }
-  }
-
-  .container_opinioni_body{
-    @include cell();
-
-
-    .container_nav_opinioni{
-      width:50.000em;
-
-
-      .corner{
-
-        .nav_opinioni_wrapper{
-          @include cols();
-
-          .back_container{
-            @include cell();
-            width:4.375em;
-          }
-          .container_opinioni{
-            @include flex();
-
-            .body_opinioni{
-              width:23.438em;
-
-
-              .opinioni_img{
-                position: relative;
-                float: left;
-                width:29.3%;
-
-
-                .container_img_op{
-                  width: 90%;
-
-                  border: 2px solid black;
-                }
-              }
-              .opinioni_value{
-                position: relative;
-                float: left;
-                width:69%;
-
-
-                .container_name_star{
-                  width: 65%;
-
-                  .name_op{
-                    margin-bottom: 0.500em;
-                  }
-                }
-
-              }
-
-            }
-
-          }
-          .forward_container{
-            @include cell();
-            width:4.375em;
+            border: 2px solid black;
           }
         }
+        .opinioni_value {
+          position: relative;
+          float: left;
+          width: 69%;
+
+          .container_name_star {
+            width: 65%;
+
+            .name_op {
+              margin-bottom: 0.500em;
+            }
+          }
+
+        }
+
       }
+
     }
-  }
-}
+
