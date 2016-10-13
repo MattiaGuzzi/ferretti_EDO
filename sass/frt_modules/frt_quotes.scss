@@ -27,6 +27,12 @@
       .container_quote {
         max-width: 1366px/$golden-ratio;
         position: relative;
+        margin:0 auto;
+        padding: em(40px);
+
+        @include breakpoint(800px){
+          padding: em(80px);
+        }
 
         .quote-text {
           opacity: 0;
