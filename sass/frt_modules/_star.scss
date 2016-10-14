@@ -1,0 +1,40 @@
+.star {
+    font-size: 2px;
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right:  em(100px) solid transparent;
+    border-bottom: em(70px)  solid red;
+    border-left:   em(100px) solid transparent;
+    transform:    rotate(35deg);
+    &:before, &:after {
+        display: inline-block;
+        color: red;
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 0px;
+    }
+    &:before {
+        border-bottom: em(80px) solid red;
+        border-left: em(30px) solid transparent;
+        border-right: em(30px) solid transparent;
+        position: absolute;
+        top: -#{em(45px)};
+        left: -#{em(65px)};
+        transform: rotate(-35deg);
+
+    }
+    &:after {
+        top: em(3px);
+        left: -#{em(105px)};
+        border-right: em(100px) solid transparent;
+        border-bottom: em(70px) solid red;
+        border-left: em(100px) solid transparent;
+        transform: rotate(-70deg);
+    }
+
+}
