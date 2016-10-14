@@ -39,12 +39,33 @@
           opacity: 0;
           transition: 0.5s;
         }
-        .avatar {
+        &_mediaobject {
           position: absolute;
           max-width: 100%;
           left: 50%;
           top: 50%;
-          transform: translate3d(50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+
+          .container_img_mediaobject{
+            width:em(100px);
+            height:em(100px);
+            border: 2px solid black;
+            float: left;
+          }
+          .container_text_mediaobject{
+            float: left;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            -moz-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(30%, 50%, 0);
+            .name_reviewer{
+
+            }
+            .star_reviewer{
+
+            }
+          }
         }
         .frt_review {
           visibility: hidden;
