@@ -1,6 +1,7 @@
 
 .frt_features{
   justify-content: center;
+  padding-bottom: em(40px);
 
   .cols_33{
     display: block;
@@ -11,8 +12,46 @@
       padding-bottom: em(20px);
     }
     .label_features{
+      font-size: em(12px);
       text-align: center;
       padding: 0 em(40px) em(40px) em(40px);
+      line-height: percentage(em(19px,12px)/em(12px)) ;
     }
   }
 }
+.container_text_features{
+  padding-top: em(80px);
+
+  &_title{
+    margin:0px;
+  }
+  p{
+    font-family: $secondary_font;
+    line-height:$interline;
+    letter-spacing: $letter-spacing-paragraph;
+    color: $dark_grey;
+    margin-top: 0.625em;
+    font-size: 0.9em;
+  }
+}
+
+
+
+
+/*label{
+  bold:600;
+  font-size:12px;
+interlinea: percentage(em(19px,12px))
+}*/
+/*title{
+  bold:400;
+
+}*/
+/*frt_features{
+ padding-bottom: em(40px);
+}*/
+/*paragrapf{///////////////////////////////
+  padding-top: em(80px);
+}*/
+/*
+titoli -> h3*/
