@@ -105,6 +105,11 @@ $frt_btn_animation_time: 0.4s;
     @include padder-center;
     flex-wrap: wrap;
   }
+  &_right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
 }
 
