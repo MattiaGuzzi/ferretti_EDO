@@ -1,9 +1,18 @@
+/*
 $main_font: "sofia-pro", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $secondary_font: "museo-regular", 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$main_font_size: 16px;
+*/
 
-$letter-spacing: 0.2em;
-$letter-spacing-paragraph: 0.15em;
+$first_font:  "museo-regular", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$second_font: "sofia-pro", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+$main_font_size: 16px;
+$interline_paragraph: percentage(38px/24px); /*line-height: percentage(em(19px,12px)/em(12px))*/
+$interline_title:percentage(38px/24px);
+
+$letter-spacing-title: 0.2em;
+$letter-spacing-paragraph: 0.072em;
 $letter-spacing-btn: 0.25em;
 
 $main_color: #262626;
@@ -15,6 +24,10 @@ $light_grey: #acacac;
 
 $interline: 2em;
 
+
+
+
+
 body {
   font-size: 13px;
   @include breakpoint(#{em(800px)}) {
@@ -23,7 +36,7 @@ body {
   @include breakpoint(#{em(1280px)}) {
     font-size: $main_font_size;
   }
-  font-family: $main_font;
+  font-family: $first_font;
 
   color: $main_color;
 }
@@ -44,7 +57,7 @@ body {
 
 .quote {
   font-style: italic;
-  font-family: $secondary_font;
+  font-family: $second_font;
   line-height: $interline;
   letter-spacing: $letter-spacing-paragraph;
   color: $dark_grey;
@@ -68,7 +81,7 @@ body {
 }
 
 .text_intestazione {
-  font-family: $secondary_font;
+  font-family: $second_font;
   font-size: 0.625em;
   line-height: $interline;
   letter-spacing: $letter-spacing-paragraph;
@@ -81,7 +94,7 @@ body {
 }
 
 .footer_text {
-  font-family: $secondary_font;
+  font-family: $second_font;
   font-size: 0.750em;
   line-height: $interline;
   letter-spacing: $letter-spacing-paragraph;
@@ -96,7 +109,7 @@ body {
 .font_medium{
   font-weight: 400!important;
 }
-.font_bold, strong {
+.font_bold, .frt_title strong {
   font-weight: 600!important;
 }
 
@@ -119,7 +132,7 @@ body {
 }
 
 .font_spacing {
-  letter-spacing: $letter-spacing;
+  letter-spacing: $letter-spacing-title;
 }
 
 .text_center{
@@ -127,27 +140,27 @@ body {
 }
 
 .second_font_100 {
-  font-family: $secondary_font;
+  font-family: $second_font;
   font-weight: 100;
 }
 
 .second_font_200 {
-  font-family: $secondary_font;
+  font-family: $second_font;
   font-weight: 200;
 }
 
 .second_font {
-  font-family: $secondary_font;
+  font-family: $second_font;
   font-weight: 400;
 }
 
 .second_font_500 {
-  font-family: $secondary_font;
+  font-family: $second_font;
   font-weight: 500;
 }
 
 .second_font_600 {
-  font-family: $secondary_font;
+  font-family: $second_font;
   font-weight: 600;
 }
 
@@ -174,5 +187,83 @@ body {
 .white {
   color: white !important;
 }
+
+
+
+.frt_text{
+  font-family: $first_font;
+  font-size: em(16px);
+  @extend .font_thin;
+  line-height:$interline_paragraph;
+  letter-spacing: $letter-spacing-paragraph;
+  color: $dark_grey;
+
+  &_small{
+    font-size: em(14px);
+  }
+  &_medium{
+    font-size: em(16px);
+  }
+  &_big{
+    font-size: em(18px);
+  }
+
+  &.force_second_font{
+    font-family: $second_font;
+  }
+}
+
+
+.frt_title{
+  font-size: em(30px);
+  @extend .font_thin;
+  margin:0;
+  font-family:$second_font;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-title;
+  line-height: $interline_title;
+
+  &_smaller{
+    font-size: em(18px);
+  }
+  &_small{
+    font-size: em(24px);
+  }
+  &_medium{
+    font-size: em(30px);
+  }
+  &_big{
+    font-size: em(36px);
+  }
+  &_bigger{
+    font-size: em(48px);
+  }
+}
+
+
+
+/*
+.frt_title{
+  margin:0;
+  @extend .font_thin;
+  text-transform: uppercase;
+  font-family: sofia-pro;
+  letter-spacing: $letter-spacing;
+  line-height: $interline_title;
+  
+
+  &_small{
+    font-size: em(26px);
+  }
+  &_medium{
+    font-size: 1.750;
+  }
+  &_big{
+
+  }
+
+}*/
+
+
 
 

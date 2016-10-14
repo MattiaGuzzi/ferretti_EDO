@@ -8,7 +8,7 @@ $frt_paragraph_2nd_border_thickness: 5px;
 $frt_paragraph_animation: ease-out;
 $frt_paragraph_animation_time: 0.4s;
 
-$interline_title:1.5em;
+
 
 
 .frt_paragraph{
@@ -80,8 +80,10 @@ $interline_title:1.5em;
 }
 
 
-
-
+/*.frt_title_info{
+  font-size: em(26px);
+}*/
+/*
 .frt_subtitle{
   @extend .font_thin;
   font-size: 1.750em;
@@ -97,11 +99,11 @@ $interline_title:1.5em;
   letter-spacing: $letter-spacing;
   line-height: $interline_title;
 
-}
+}*/
 
-
+/*
 .frt_text{
-  font-family: $secondary_font;
+  font-family: $second_font;
   line-height:$interline;
   letter-spacing: $letter-spacing-paragraph;
   color: $dark_grey;
@@ -110,9 +112,9 @@ $interline_title:1.5em;
 
 
   &.force_main_font{
-    font-family: $main_font;
+    font-family: $first_font;
   }
-}
+}*/
 
 .frt_paragraph_content{
   padding: $frt_paragraph_padding;

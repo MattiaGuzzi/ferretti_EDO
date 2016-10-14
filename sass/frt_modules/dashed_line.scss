@@ -11,7 +11,7 @@
 }
 
 
-/*.dotted_line {
+/*.dashed_line {
   position: absolute;
   left: 0;
   top:50%;
@@ -35,10 +35,12 @@
   z-index:0;
   height: $border_h;
   position: absolute;
-  left: 0;
+ /* left: 0;*/
   top:50%;
   width:100%;
   @include dash(18px, 6px, #262626);
+
+
   &.bottom {
     top: 99%;
   }
@@ -54,15 +56,19 @@
     @include dash(18px, 6px, #262626);
   }
   &.dashed_line_in_col {
+    width: 100vw;
     &:before {
-      width: 100vw;
       left: 0;
     }
     &.right {
+      right: 0;
+      z-index: -1;
       &:before {
         left: auto;
-        right: 0;
       }
     }
+  }
+  &_relative{
+    position:relative;
   }
 }
