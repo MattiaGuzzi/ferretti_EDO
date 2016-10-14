@@ -45,6 +45,9 @@
           left: 50%;
           top: 50%;
           transform: translate3d(-50%, -50%, 0);
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
 
           .container_img_mediaobject{
             width:em(100px);
@@ -54,11 +57,7 @@
           }
           .container_text_mediaobject{
             float: left;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate3d(-50%, -50%, 0);
-            -moz-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(30%, 50%, 0);
+           padding-left: em(80px);
             .name_reviewer{
 
             }
