@@ -1,3 +1,12 @@
+.padding_0_20{
+  padding: 0 em(20px);
+}
+.padding_0_40{
+  padding: 0 em(40px);
+}
+.padding_0_80{
+  padding: 0 em(80px);
+}
 
 .padding_20_0{
   padding: em(20px) 0;
@@ -22,4 +31,11 @@
 }
 .padding_80{
   padding: em(80px);
+}
+
+.padding_20_40{
+  padding: em(20px) em(40px);
+}
+.padding_20_80{
+  padding: em(20px) em(80px);
 }
