@@ -93,6 +93,7 @@ $height_footer: 3.125em;
   .frasi {
     position: relative;
     width: $width_frasi;
+    margin: em(80px) 0;
   }
   .servizi {
     position: relative;
@@ -101,6 +102,7 @@ $height_footer: 3.125em;
   .opinioni {
     position: relative;
     width: $width_opinioni;
+    margin: em(80px) 0;
   }
   .realizzazioni {
     position: relative;

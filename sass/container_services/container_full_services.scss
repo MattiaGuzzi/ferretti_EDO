@@ -1,6 +1,19 @@
 .container_full_services{
   .frt_img_cover{
     position: absolute;
+
+    &:after{
+      content: ' ';
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 1;
+      background-image: url('../img/strips.png');
+      background-repeat: repeat;
+    }
   }
 
   .frt_title{
@@ -8,7 +21,12 @@
     font-size: em(48px);
   }
 
+  h2{
+    padding-top: calc(5% - 40px);
+  }
+
   .container_button{
     transform: translate3d(0%, 50%, 0);
   }
 }
+

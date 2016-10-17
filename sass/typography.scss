@@ -13,7 +13,7 @@ $interline_title:percentage(38px/24px);
 
 $letter-spacing-title: 0.2em;
 $letter-spacing-paragraph: 0.072em;
-$letter-spacing-btn: 0.25em;
+$letter-spacing-btn: 0.2em;
 
 $main_color: #262626;
 $blue: #002a50;
@@ -41,9 +41,70 @@ body {
   color: $main_color;
 }
 
+h1,h2,h3,h4,h5,h6,p{
+  margin:0;
+}
+
 a{
   text-decoration: none;
 }
+
+
+
+.frt_text{
+  font-family: $first_font;
+  font-size: em(16px);
+  @extend .font_thin;
+  line-height:$interline_paragraph;
+  letter-spacing: $letter-spacing-paragraph;
+  color: $dark_grey;
+
+
+  &_smaller{
+    font-size: em(12px);
+  }
+  &_small{
+    font-size: em(14px);
+  }
+  &_medium{
+    font-size: em(16px);
+  }
+  &_big{
+    font-size: em(18px);
+  }
+
+  &_force_second_font{
+    font-family: $second_font;
+  }
+}
+
+
+.frt_title{
+  font-size: em(30px);
+  @extend .font_thin;
+  margin:0;
+  font-family:$second_font;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-title;
+  line-height: $interline_title;
+
+  &_smaller{
+    font-size: em(18px)!important;
+  }
+  &_small{
+    font-size: em(24px)!important;
+  }
+  &_medium{
+    font-size: em(30px)!important;
+  }
+  &_big{
+    font-size: em(36px)!important;
+  }
+  &_bigger{
+    font-size: em(48px)!important;
+  }
+}
+
 
 
 .label_pappoc {
@@ -144,27 +205,27 @@ a{
 }
 
 .second_font_100 {
-  font-family: $second_font;
+  font-family: $second_font!important;
   font-weight: 100;
 }
 
 .second_font_200 {
-  font-family: $second_font;
+  font-family: $second_font!important;
   font-weight: 200;
 }
 
-.second_font {
-  font-family: $second_font;
+.second_font_400 {
+  font-family: $second_font!important;;
   font-weight: 400;
 }
 
 .second_font_500 {
-  font-family: $second_font;
+  font-family: $second_font!important;
   font-weight: 500;
 }
 
 .second_font_600 {
-  font-family: $second_font;
+  font-family: $second_font!important;
   font-weight: 600;
 }
 
@@ -192,81 +253,6 @@ a{
   color: white !important;
 }
 
-
-
-.frt_text{
-  font-family: $first_font;
-  font-size: em(16px);
-  @extend .font_thin;
-  line-height:$interline_paragraph;
-  letter-spacing: $letter-spacing-paragraph;
-  color: $dark_grey;
-
-  &_small{
-    font-size: em(14px);
-  }
-  &_medium{
-    font-size: em(16px);
-  }
-  &_big{
-    font-size: em(18px);
-  }
-
-  &_force_second_font{
-    font-family: $second_font;
-  }
-}
-
-
-.frt_title{
-  font-size: em(30px);
-  @extend .font_thin;
-  margin:0;
-  font-family:$second_font;
-  text-transform: uppercase;
-  letter-spacing: $letter-spacing-title;
-  line-height: $interline_title;
-
-  &_smaller{
-    font-size: em(18px);
-  }
-  &_small{
-    font-size: em(24px);
-  }
-  &_medium{
-    font-size: em(30px);
-  }
-  &_big{
-    font-size: em(36px);
-  }
-  &_bigger{
-    font-size: em(48px);
-  }
-}
-
-
-
-/*
-.frt_title{
-  margin:0;
-  @extend .font_thin;
-  text-transform: uppercase;
-  font-family: sofia-pro;
-  letter-spacing: $letter-spacing;
-  line-height: $interline_title;
-  
-
-  &_small{
-    font-size: em(26px);
-  }
-  &_medium{
-    font-size: 1.750;
-  }
-  &_big{
-
-  }
-
-}*/
 
 
 

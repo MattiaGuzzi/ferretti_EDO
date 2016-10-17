@@ -2,8 +2,24 @@
 .container_single_service{
   .frt_img_cover{
     position: absolute;
+
+    &:after{
+      content: ' ';
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 1;
+      background-image: url('../img/strips.png');
+      background-repeat: repeat;
+    }
   }
 
+  h2{
+    padding-top: calc(5% - 40px);
+  }
   .frt_title{
     text-align: center;
     font-size: em(48px);
