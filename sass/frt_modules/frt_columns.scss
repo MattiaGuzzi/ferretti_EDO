@@ -6,6 +6,10 @@ $second_percent:38.196601125014531620728291700417%;
   flex-wrap: wrap;
   width:100%;
 
+  &_jcenter{
+    justify-content: center;
+  }
+
   .cols_60{
     display: flex;
     align-items: center;

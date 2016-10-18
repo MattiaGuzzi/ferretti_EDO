@@ -88,6 +88,7 @@ a{
   letter-spacing: $letter-spacing-title;
   line-height: $interline_title;
 
+
   &_smaller{
     font-size: em(18px)!important;
   }
@@ -229,6 +230,9 @@ a{
   font-weight: 600;
 }
 
+.main_color{
+  color: $main_color!important;
+}
 .blue {
   color: $blue!important;
 }

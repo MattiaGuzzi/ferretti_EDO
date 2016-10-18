@@ -19,6 +19,7 @@ $frt_img_big_canvas_size: 30px;
   .frt_img {
     background-image: url("../img/strips.png");
     line-height: 0px;
+    width: 100%;
 
     &.reverse {
       background-image: url("../img/rev_strips.png");
@@ -64,6 +65,7 @@ $frt_img_big_canvas_size: 30px;
       img {
         border: none;
         margin: 0px;
+        width:100%;
         max-width: 100%;
         max-height: 100%;
         position: relative;

@@ -8,7 +8,11 @@ $color_pappoc: #252525;
 
 
 .frt_pappoc {
-  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  align-items: center;
+
   .pappoc_round {
     position: relative;
     width: $width_pappoc;
@@ -50,7 +54,7 @@ $color_pappoc: #252525;
   }
 
   .label_pappoc{
-    margin-left: 4em;
+    margin-left: em(17px);
   }
 }
 

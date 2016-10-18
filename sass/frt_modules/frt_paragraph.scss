@@ -73,7 +73,7 @@ $frt_paragraph_animation_time: 0.4s;
   &.big_padding{
     .frt_paragraph_wrapper {
       .frt_paragraph_content{
-        padding: $frt_paragraph_big_padding !important;
+        padding: $frt_paragraph_big_padding;
       }
     }
   }

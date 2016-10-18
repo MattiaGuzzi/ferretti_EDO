@@ -64,7 +64,7 @@ $frt_input_2nd_border_thickness: 3px;
 
       .frt_input[type="radio"],
       .frt_input[type="checkbox"]{
-        width: 1.2em;
+        width: 1.2em!important;
         height: 1.2em;
         border: solid $frt_input_border_thickness #999;
         position: relative;

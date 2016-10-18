@@ -100,7 +100,7 @@ $frt_btn_animation_time: 0.4s;
 
 .container_button {
   position: relative;
-  padding-left: em(20px);
+/*  padding-left: em(20px);*/
 
   &_center {
     @include padder-center;
@@ -127,7 +127,7 @@ $frt_btn_animation_time: 0.4s;
 
 
   @include breakpoint(800px) {
-    margin: em(10px) em(20px);
+    margin: em(20px) em(40px);
   }
 
   .PADDER-CENTER {

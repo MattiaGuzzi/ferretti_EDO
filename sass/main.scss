@@ -10,6 +10,44 @@
 @import "typography.scss";
 
 
+/* CONTAINER SERVICES */
+@import "container_services/container_full_services";
+@import "container_services/container_single_service";
+@import "container_services/container_two_photos";
+@import "container_services/container_box_img";
+
+
+
+@import "frt_modules/frt_button";
+@import "frt_modules/frt_paragraph";
+@import "frt_modules/frt_images";
+@import "frt_modules/frt_guarda_paragraph";
+@import "frt_modules/frt_mediaObject";
+
+
+@import "frt_modules/frt_pappoc";
+@import "frt_modules/frt_corner";
+@import "frt_modules/dashed_line";
+@import "frt_modules/frt_form";
+@import "frt_modules/frt_plus";
+@import "frt_modules/frt_columns";
+@import "frt_modules/frt_quotes";
+@import "frt_modules/frt_features";
+@import "frt_modules/_star";
+@import "frt_modules/_padding";
+@import "frt_modules/frt_hyphen_list";
+
+
+
+
+
+@import "frt_modules/frt_maps";
+@import "frt_modules/frt_instagram";
+
+
+
+
+
 /* HOME PAGE */
 @import "home/site";
 @import "home/header";
@@ -85,36 +123,5 @@
 /* BLOG ARTICOLO PAGE */
 @import "blog_articolo/blog_articolo_page";
 @import "blog_articolo/blog_articolo_top";
-
-/* CONTAINER SERVICES */
-@import "container_services/container_full_services";
-@import "container_services/container_single_service";
-
-
-
-@import "frt_modules/frt_button";
-@import "frt_modules/frt_paragraph";
-@import "frt_modules/frt_images";
-@import "frt_modules/frt_guarda_paragraph";
-@import "frt_modules/frt_mediaObject";
-
-
-@import "frt_modules/frt_pappoc";
-@import "frt_modules/frt_corner";
-@import "frt_modules/dashed_line";
-@import "frt_modules/frt_form";
-@import "frt_modules/frt_plus";
-@import "frt_modules/frt_columns";
-@import "frt_modules/frt_quotes";
-@import "frt_modules/frt_features";
-@import "frt_modules/_star";
-@import "frt_modules/_padding";
-
-
-
-
-@import "frt_modules/frt_maps";
-@import "frt_modules/frt_instagram";
-
 
 

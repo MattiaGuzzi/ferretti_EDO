@@ -1,8 +1,27 @@
+.container_carousel{
+  .frt_columns{
+    .cols_60{
+      flex-wrap: wrap;
+      .container_img_section{
+        img{
+          width:100%;
+        }
+      }
+      .content_bubble{
+        width:em(490px);
+        transform: translate3d(5%, -50%, 0);
+
+        p{
+          padding-top:em(30px);
+        }
+      }
+    }
+  }
+}
 
 
 
-
-
+/*
 .container_carousel {
   .container_img_section {
     width: 58.4%;
@@ -20,4 +39,4 @@
     width: 34.25em;
     left: 1.563em;
   }
-}
+}*/

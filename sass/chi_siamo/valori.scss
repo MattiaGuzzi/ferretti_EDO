@@ -1,3 +1,12 @@
+.valori{
+  .content_bubble{
+    transform: translate3d(-20%, 30%, 0);
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/*
 $width_valori_left:41%;
 $width_valori_right:59%;
 
@@ -86,4 +95,4 @@ $width_valori_right:59%;
       }
     }
   }
-}
+}*/
