@@ -36,14 +36,15 @@
         }
 
         .quote-text {
-          opacity: 0;
-          transition: 0.5s;
+
         }
         &_mediaobject {
           position: absolute;
           max-width: 100%;
           left: 50%;
           top: 50%;
+          transition: 0.5s;
+          transition-property:visibility, opacity ;
           transform: translate3d(-50%, -50%, 0);
           display: flex;
           flex-wrap: wrap;
@@ -59,7 +60,9 @@
             float: left;
            padding-left: em(80px);
             .name_reviewer{
-
+              font-weight: 700;
+              font-family: $second_font;
+              font-size: em(18px);
             }
             .star_review{
               display: flex;
@@ -75,12 +78,18 @@
         }
 
       }
-      :hover {
+      &:hover {
         .frt_review {
-          transition: 0.5s;
+
+          opacity: 1;
+          visibility: visible;
+        }
+        .container_quote_mediaobject{
+
           opacity: 0;
           visibility: hidden;
         }
+
       }
     }
   }

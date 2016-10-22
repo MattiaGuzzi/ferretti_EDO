@@ -32,13 +32,14 @@
 }*/
 
 .dashed_line {
-  z-index:0;
+  z-index:-1;
   height: $border_h;
   position: absolute;
- /* left: 0;*/
+  margin-bottom:($border_h/2)*(-1) ;
   top:50%;
-  width:100%;
-  @include dash(18px, 6px, #262626);
+  width:200vw;
+  left: -100vw;
+
 
 
   &.bottom {
@@ -50,24 +51,12 @@
   &:before {
     content: '';
     position: absolute;
-    left: 0;
     top: 0;
     width:100%;
     @include dash(18px, 6px, #262626);
+    height: 4px;
   }
-  &.dashed_line_in_col {
-    width: 100vw;
-    &:before {
-      left: 0;
-    }
-    &.right {
-      right: 0;
-      z-index: -1;
-      &:before {
-        left: auto;
-      }
-    }
-  }
+
   &_relative{
     position:relative;
   }

@@ -13,16 +13,22 @@ $frt_paragraph_animation_time: 0.4s;
 
 .frt_paragraph{
 
-  background-image: url("../img/strips.png");
-  position:relative;
+  &:before {
+    background-image: url("../img/strips.png");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:$frt_paragraph_2nd_border_thickness;
+    left:$frt_paragraph_2nd_border_thickness*(-1);
+    content: "";
+  }
 
 
   .frt_paragraph_wrapper{
     border: solid $frt_paragraph_border_thickness $frt_paragraph_border_color;
     background-color:white;
     position:relative;
-    top:$frt_paragraph_2nd_border_thickness*(-1);
-    left:$frt_paragraph_2nd_border_thickness;
+
     width: 100%;
 
 

@@ -3,7 +3,7 @@ $main_font: "sofia-pro", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $secondary_font: "museo-regular", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 */
 
-$first_font:  "museo-regular", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$first_font:  "museo-sans", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $second_font: "sofia-pro", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
@@ -26,9 +26,17 @@ $interline: 2em;
 
 
 
-
+html{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  &.ovhidden{
+    height:100vh;
+    overflow: hidden;
+  }
+}
 
 body {
+  overflow-x: hidden;
   font-size: 13px;
   @include breakpoint(#{em(800px)}) {
     font-size: 14px;
@@ -48,8 +56,20 @@ h1,h2,h3,h4,h5,h6,p{
 a{
   text-decoration: none;
 }
+strong{
+  font-weight: 700;
+}
 
+.font_thin {
+  font-weight: 100;
+}
 
+.font_medium{
+  font-weight: 400;
+}
+.frt_title strong {
+  font-weight: 600;
+}
 
 .frt_text{
   font-family: $first_font;
@@ -81,12 +101,16 @@ a{
 
 .frt_title{
   font-size: em(30px);
-  @extend .font_thin;
   margin:0;
+  font-weight: 100;
   font-family:$second_font;
   text-transform: uppercase;
   letter-spacing: $letter-spacing-title;
   line-height: $interline_title;
+
+  &.cover_title{
+    color: white;
+  }
 
 
   &_smaller{
@@ -104,7 +128,22 @@ a{
   &_bigger{
     font-size: em(48px)!important;
   }
+  .header-section & {
+    font-size: em(48px);
+    color:$blue;
+    letter-spacing: $letter-spacing-paragraph;
+
+    strong{
+      color: $light_blue;
+    }
+  }
+  mark{
+    display: block;
+    background-color: transparent;
+    color: $light_blue;
+  }
 }
+
 
 
 
@@ -168,16 +207,7 @@ a{
   width: 100%;
 }
 
-.font_thin {
-  font-weight: 100;
-}
 
-.font_medium{
-  font-weight: 400!important;
-}
-.font_bold, .frt_title strong {
-  font-weight: 600!important;
-}
 
 .font_lowercase {
   text-transform: lowercase;

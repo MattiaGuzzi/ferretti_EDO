@@ -1,3 +1,47 @@
-$width_max_site: 1680px;
+$max-width: 1366px;
+$width_max_site: 100%;
 $border_h: 4px;
 $golden-ratio: 1.61803398875;
+$storia_padding: percentage(130px/410px);
+$vb: 850px;
+
+.storia {
+  .content_bubble {
+    .frt_title:nth-of-type(1) {
+      padding-bottom: $storia_padding;
+      line-height: 1;
+    }
+  }
+}
+
+
+@mixin normalize_padding{
+  padding: {
+    left: em(10px);
+    right: em(10px);
+  }
+  @include breakpoint(640px){
+    padding: {
+      left: em(20px);
+      right: em(20px);
+    }
+  }
+  @include breakpoint(850px){
+    padding: {
+      left: em(40px);
+      right: em(40px);
+    }
+  }
+  @include breakpoint(1366px){
+    padding: {
+      left: em(0px);
+      right: em(0px);
+    }
+  }
+
+}
+
+
+.offset{
+
+}
