@@ -9,7 +9,8 @@
       }
       .content_bubble{
         width:em(490px);
-        transform: translate3d(5%, -50%, 0);
+        transform: translateX(5%) translateY(-50%);
+
 
         p{
           padding-top:em(30px);

@@ -28,13 +28,14 @@
     position: relative;
     width: 1366px/$golden-ratio;
     margin: 0 auto;
-    transform: translate3d(0%, 10%, 0);
+    transform: translateY(10%);
     .content_bubble_arredamenti {
       .container_button{
         position: absolute;
         left:50%;
         bottom:0;
-        transform: translate3d(-50%, 50%, 0);
+        transform: translateX(-50%) translateY(50%);
+
       }
     }
   }
