@@ -1,17 +1,18 @@
 .frt_columns.container_two_photos{
 
+
   .cols_40{
     .frt_paragraph{
       z-index:1;
-      transform: translate3d(-50%, 0, 0);
+      transform: translateX(-20%);
     }
   }
   .cols_100{
-    transform: translate3d(0%, -45%, 0);
+    transform: translateY(-45%);
     align-items: flex-end;
 
     .container_button{
-      transform: translate3d(0%, -100%, 0);
+      transform: translateY( -100%);
     }
   }
 }

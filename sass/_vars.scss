@@ -23,10 +23,10 @@ $frt_btn_border_color: #262626;
 $main_font_size: 16px;
 $secondary_font: "sofia-pro", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $main_font: "museo-sans", 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+$letter-spacing-price: 0.2em;
 $letter-spacing: 0.2em;
 $letter-spacing-paragraph: 0.072em;
-$letter-spacing-btn: 0.2em;
+$letter-spacing-btn: em(1px);
 $interline_paragraph: percentage(38px/24px); 
 $interline_title:percentage(38px/24px);
 $letter-spacing-title: 0.2em;

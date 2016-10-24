@@ -16,7 +16,26 @@ ul.list{
       margin-right:20px;
       top: 50%;
       left:0px;
-      transform: translateY(-50%);
+
     }
   }
 }
+
+.signature {
+  .name{
+    position:relative;
+    padding-left:35px;
+    &:before {
+      content: "";
+      position: absolute;
+      display:inline-block;
+      height: 4px;
+      width:30px;
+      background: black;
+      margin-right:20px;
+      top: 50%;
+      left:0px;
+    }
+  }
+}
+

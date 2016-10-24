@@ -1,0 +1,114 @@
+$width_container_header: 100%;
+
+/* HEADER VARIABLE */
+$width_header: 100%;
+$height_header: 5.375em;
+
+/* SLIDER VARIABLE */
+$width_slider: 100%;
+
+/* INTRO VARIABLE */
+$width_intro: 100%;
+
+/* MISSION VARIABLE */
+$width_mission: 100%;
+
+/* CAROUSEL VARIABLE */
+$width_carousel: 100%;
+
+/* ARREDAMENTI VARIABLE */
+$width_arredamenti: 100%;
+
+/* FRASI VARIABLE */
+$width_frasi: 100%;
+
+/* SERVIZI VARIABLE */
+$width_servizi: 100%;
+
+/* OPINIONI VARIABLE */
+$width_opinioni: 100%;
+
+/* REALIZZAZIONI VARIABLE */
+$width_realizzazioni: 100%;
+
+/* INTESTAZIONE VARIABLE */
+$width_intestazione: 100%;
+
+/* FOOTER VARIABLE */
+$height_footer: 3.125em;
+
+.slider {
+  position: relative;
+  width: $width_slider;
+  @extend .section;
+}
+
+.intro {
+  position: relative;
+  width: $width_intro;
+}
+
+.mission {
+  position: relative;
+  width: $width_mission;
+
+  .container_mission {
+    .content_bubble {
+      z-index: 2;
+      position: absolute;
+      width: 30.625em;
+      top: 15.750em;
+      right: 5%;
+    }
+
+  }
+}
+
+.carousel {
+  position: relative;
+  width: $width_carousel;
+  height: 46.25em;
+}
+
+.arredamenti {
+  position: relative;
+  width: $width_arredamenti;
+}
+
+.frasi {
+  position: relative;
+  width: $width_frasi;
+  margin: em(80px) 0;
+}
+
+.servizi {
+  position: relative;
+  width: $width_servizi;
+}
+
+.opinioni {
+  position: relative;
+  width: $width_opinioni;
+  margin: em(80px) 0;
+}
+
+.realizzazioni {
+  position: relative;
+  width: $width_realizzazioni;
+}
+
+.intestazione {
+  position: relative;
+  width: $width_intestazione;
+}
+
+.footer {
+  position: relative;
+  height: $height_footer;
+  width: 100%;
+}
+
+
+
+
+

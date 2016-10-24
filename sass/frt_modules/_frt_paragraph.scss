@@ -12,6 +12,7 @@ $frt_paragraph_animation_time: 0.4s;
 
 
 .frt_paragraph{
+  width: 100%;
 
   &:before {
     background-image: url("../img/strips.png");
@@ -28,8 +29,14 @@ $frt_paragraph_animation_time: 0.4s;
     border: solid $frt_paragraph_border_thickness $frt_paragraph_border_color;
     background-color:white;
     position:relative;
-
     width: 100%;
+    padding:em(10px);
+    @include breakpoint(640px){
+      padding:em(20px);
+    }
+    @include breakpoint($bp){
+      padding:em(40px);
+    }
 
 
   }
@@ -48,83 +55,22 @@ $frt_paragraph_animation_time: 0.4s;
   */
   &.inverse{
     .frt_paragraph_wrapper {
-      left: (($frt_paragraph_border_thickness * 2) + $frt_paragraph_2nd_border_thickness ) *(-1);
+      &:before {
+        left: (($frt_paragraph_border_thickness * 2) + $frt_paragraph_2nd_border_thickness ) *(-1);
+      }
     }
   }
 
   &.no_shadow{
     .frt_paragraph_wrapper {
-      left:0px !important;
-      top:0px !important;
-    }
-  }
-
-  &.no_border{
-    .frt_paragraph_wrapper {
-      border: none !important;
-      left:0px !important;
-      top:0px !important;
-    }
-  }
-
-  &.no_padding{
-    .frt_paragraph_wrapper {
-      .frt_paragraph_content{
-        padding: 0px !important;
+      &:before{
+        background-image: none;
       }
     }
   }
 
-
-  &.big_padding{
-    .frt_paragraph_wrapper {
-      .frt_paragraph_content{
-        padding: $frt_paragraph_big_padding;
-      }
-    }
-  }
 }
 
-
-/*.frt_title_info{
-  font-size: em(26px);
-}*/
-/*
-.frt_subtitle{
-  @extend .font_thin;
-  font-size: 1.750em;
-  text-transform: uppercase;
-  letter-spacing: $letter-spacing;
-  line-height: $interline_title;
-}
-
-.frt_title{
-  @extend .font_thin;
-  font-size: 1.750em;
-  text-transform: uppercase;
-  letter-spacing: $letter-spacing;
-  line-height: $interline_title;
-
-}*/
-
-/*
-.frt_text{
-  font-family: $second_font;
-  line-height:$interline;
-  letter-spacing: $letter-spacing-paragraph;
-  color: $dark_grey;
-  margin-top: 0.625em;
-  font-size: 0.9em;
-
-
-  &.force_main_font{
-    font-family: $first_font;
-  }
-}*/
-
-.frt_paragraph_content{
-  padding: $frt_paragraph_padding;
-}
 
 
 

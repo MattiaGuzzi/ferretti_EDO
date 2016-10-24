@@ -1,0 +1,15 @@
+.section {
+  margin-bottom: 14.063em;
+}
+
+.container {
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: $width_max_site;
+  margin: 0 auto;
+  overflow: hidden;
+}

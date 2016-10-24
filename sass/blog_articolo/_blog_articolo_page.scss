@@ -96,7 +96,7 @@
 
 .title_blog{
   margin:0;
-  font-family:$second_font;
+  font-family:$secondary_font;
   text-transform: uppercase;
   letter-spacing: $letter-spacing-title;
   line-height: $interline_title;
@@ -104,7 +104,7 @@
 }
 
 .text_blog{
-  font-family: $second_font;
+  font-family: $secondary_font;
   @extend .font_thin;
   line-height:$interline_paragraph;
   letter-spacing: $letter-spacing-paragraph;

@@ -5,8 +5,7 @@
 @import "lib/grid";
 @import "lib/flexScaffolding";
 @import "function";
-
-
+@import "site.scss";
 @import "typography.scss";
 
 
@@ -36,6 +35,7 @@
 @import "frt_modules/_star";
 @import "frt_modules/_padding";
 @import "frt_modules/frt_hyphen_list";
+@import "frt_modules/frt_price";
 
 
 
@@ -49,7 +49,7 @@
 
 
 /* HOME PAGE */
-@import "home/site";
+@import "home/home";
 @import "home/header";
 @import "home/slider";
 @import "home/intro";

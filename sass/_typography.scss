@@ -103,6 +103,7 @@ strong {
         font-size: em(48px);
         color:$blue;
         letter-spacing: $letter-spacing-paragraph;
+        text-align: center;
 
         strong{
             color: $light_blue;
@@ -128,13 +129,13 @@ strong {
     color: $light_blue;
     letter-spacing: $letter-spacing-paragraph;
     text-transform: uppercase;
-    line-height: $interline;
+
 }
 
 .quote {
     font-style: italic;
     font-family: $secondary_font;
-    line-height: $interline;
+
     letter-spacing: $letter-spacing-paragraph;
     color: $dark_grey;
 }
@@ -159,7 +160,7 @@ strong {
 .text_intestazione {
     font-family: $secondary_font;
     font-size: 0.625em;
-    line-height: $interline;
+
     letter-spacing: $letter-spacing-paragraph;
     color: $grey;
 
@@ -172,7 +173,7 @@ strong {
 .footer_text {
     font-family: $secondary_font;
     font-size: 0.750em;
-    line-height: $interline;
+
     letter-spacing: $letter-spacing-paragraph;
     color: $dark_grey;
     width: 100%;

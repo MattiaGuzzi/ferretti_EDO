@@ -13,9 +13,8 @@
         flex: 0 0 auto;
         display: flex;
         align-items: center;
-        justify-content: center;
     }
-    @include breakpoint(604px) {
+    @include breakpoint(640px) {
         .cols_50 {
             width: 50%;
         }
@@ -31,7 +30,7 @@
             width: $second_percent;
         }
         .cols_33 {
-            width:100%/3;
+            width:$f/3;
         }
     }
     .cols_100{
@@ -58,4 +57,8 @@
             }
     }    
     }
+}
+
+.cols_meta{
+   text-align: center;
 }
