@@ -1,0 +1,12 @@
+.frt_quotes {
+    .arrow {
+        @include breakpoint(1366px/$golden-ratio) {
+            &-prev {
+                left: calc( (100% - #{1366px/$golden-ratio}) / 2)
+            }
+            &-next {
+                right: calc( (100% - #{1366px/$golden-ratio}) / 2)
+            }
+        }
+    }
+}

@@ -1,96 +1,96 @@
 
 .frt_quotes {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  .corner {
-    position: absolute;
-    height: 100%;
-    top:0;
-    left:50%;
-    transform: translate3d(-50%, 0, 0);
-  }
-  &_list {
+    position: relative;
     display: flex;
-    padding: em(40px) 0;
-    /* niente flex-wrap */
-    align-items: center;
-
-    @include breakpoint(800px) {
-      padding: em(80px) 0;
+    flex-direction: column;
+    overflow: hidden;
+    .corner {
+        position: absolute;
+        height: 100%;
+        top:0;
+        left:50%;
+        transform: translate3d(-50%, 0, 0);
     }
+    &_list {
+        display: flex;
+        padding: em(40px) 0;
+        /* niente flex-wrap */
+        align-items: center;
 
-    &_item {
-      width: 100%;
-      flex: 0 0 auto;
-
-      .container_quote {
-        max-width: 1366px/$golden-ratio;
-        position: relative;
-        margin:0 auto;
-        padding: em(40px);
-
-        @include breakpoint(800px){
-          padding: em(80px);
+        @include breakpoint(800px) {
+            padding: em(80px) 0;
         }
 
-        .quote-text {
+        &_item {
+            width: 100%;
+            flex: 0 0 auto;
 
-        }
-        &_mediaobject {
-          position: absolute;
-          max-width: 100%;
-          left: 50%;
-          top: 50%;
-          transition: 0.5s;
-          transition-property:visibility, opacity ;
-          transform: translate3d(-50%, -50%, 0);
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
+            .container_quote {
+                max-width: 1366px/$golden-ratio;
+                position: relative;
+                margin:0 auto;
+                padding: em(40px);
 
-          .container_img_mediaobject{
-            width:em(100px);
-            height:em(100px);
-            border: 2px solid black;
-            float: left;
-          }
-          .container_text_mediaobject{
-            float: left;
-           padding-left: em(80px);
-            .name_reviewer{
-              font-weight: 700;
-              font-family: $second_font;
-              font-size: em(18px);
+                @include breakpoint(800px){
+                    padding: em(80px);
+                }
+
+                .quote-text {
+
+                }
+                &_mediaobject {
+                    position: absolute;
+                    max-width: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transition: 0.5s;
+                    transition-property:visibility, opacity ;
+                    transform: translate3d(-50%, -50%, 0);
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    .container_img_mediaobject{
+                        width:em(100px);
+                        height:em(100px);
+                        border: 2px solid $main_color;
+                        margin: 0;
+                    }
+                    .container_text_mediaobject{
+                        padding-left: em(40px);
+                        .name_reviewer{
+                            font-weight: 700;
+                            font-family: $secondary_font;
+                            font-size: em(18px);
+                        }
+                        .star_review{
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                        }
+                    }
+                }
+                .frt_review {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+                img {
+                    width: 100%;
+                }
+                &.has_review {
+                    &:hover {
+                        .frt_review {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        .container_quote_mediaobject{
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+
+                    }
+                }
             }
-            .star_review{
-              display: flex;
-              flex-wrap: wrap;
-              align-items: center;
-            }
-          }
         }
-        .frt_review {
-          visibility: hidden;
-          opacity: 0;
-          transition: 0.5s;
-        }
-
-      }
-      &:hover {
-        .frt_review {
-
-          opacity: 1;
-          visibility: visible;
-        }
-        .container_quote_mediaobject{
-
-          opacity: 0;
-          visibility: hidden;
-        }
-
-      }
     }
-  }
 }

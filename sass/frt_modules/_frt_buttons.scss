@@ -1,0 +1,219 @@
+$frt_btn_padding_desktop: em(20px) em(40px);
+$frt_btn_padding_mobile: em(10px) em(20px);
+
+$frt_btn_border_thickness: 0.20em;
+$frt_btn_border_color: $main_color;
+$frt_btn_2nd_border_thickness: 0.313em;
+
+$frt_btn_animation: ease-out;
+$frt_btn_animation_time: 0.4s;
+
+[ng-click] {
+    cursor: pointer;
+}
+
+.container_button {
+    position: relative;
+    &_center {
+        @include padder-center;
+        flex-wrap: wrap;
+    }
+}
+
+.frt_btn {
+    position: relative;
+    z-index: 1;
+    border: 0;
+    padding: 0;
+    margin: em(10px);
+    transition: {
+        property: background-color, border-color;
+        duration: .5s;
+    }
+    @include breakpoint($bp) {
+        margin: em(20px) em(40px);
+    }
+    .btn_wrapper {
+        border: solid $frt_btn_border_thickness $frt_btn_border_color;
+        padding: $frt_btn_padding_mobile;
+        background-color: white;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 2;
+        transition: {
+            duration: $speed;
+            property: background-color;
+        }
+        @include padder-center;
+        @include breakpoint($bp) {
+            padding: $frt_btn_padding_desktop;
+        }
+    }
+    &:before {
+        content: "";
+        background: linear-gradient(-45deg,
+            #000 1px, transparent 0,
+            transparent calc(50% - 1px), #000 0,
+            #000 calc(50% + 1px), transparent 0,
+            transparent calc(100% - 1px), #000 0);
+        background-size: 6px/sqrt(2) 6px/sqrt(2);
+        position: absolute;
+        bottom: $frt_btn_2nd_border_thickness*(-1);
+        left: $frt_btn_2nd_border_thickness*(-1);
+        width: 100%;
+        height: 100%;
+        opacity: 0.25;
+        transition:opacity 0.5s;
+    }
+    &:after {
+        content: "";
+        bottom: 0;
+        left: 0;
+        background: #000006;;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    &:hover {
+        .btn_wrapper {
+            background-color: $light_blue;
+            border-color: $light_blue;
+            color: white;
+        }
+        &:after {
+            opacity: 1;
+            bottom: $frt_btn_2nd_border_thickness*(-1.5);
+            left: $frt_btn_2nd_border_thickness*(-1.5);
+        }
+        &:before {
+            opacity: 0;
+        }
+        .icon_button, .label_button{
+            color: white;
+        }
+    }
+}
+
+.label_button {
+    font-size: em(12px);
+    font-family: $secondary_font;
+    font-weight: 600;
+    letter-spacing: $letter-spacing-btn;
+    text-align: left;
+    color: $main_color;
+    @include breakpoint(640px){
+        font-size: em(13px);
+    }
+    @include breakpoint($bp){
+        font-size: em(14px);
+    }
+    @include breakpoint(1024px){
+        font-size: em(16px);
+    }
+}
+
+.icon_button {
+    font-size: em(20px);
+    color: $blue;
+    margin-right: em(20px, 20px);
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(640px){
+        font-size: em(21px);
+        margin-right: em(20px, 21px);
+    }
+    @include breakpoint($bp){
+        font-size: em(22px);
+        margin-right: em(20px, 22px);
+    }
+    @include breakpoint(1024px){
+        font-size: em(24px);
+        margin-right: em(20px, 24px);
+    }
+}
+
+.icon-facebook {
+    background: $blue;
+    width: em(20px);
+    height: em(20px);
+    border-radius: em(2px);
+    border: em(3px) solid $blue;
+    border-bottom: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        background: $blue;
+        width: em(8px);
+        height: em(20px);
+        top: em(3px);
+        right: em(4px)*-1;
+        border: em(2px) solid #fff;
+        border-radius: em(3px);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: em(6px);
+        top: 50%;
+        height: em(2px);
+        background: #fff;
+        right: 0;
+        margin-top: -1px;
+    }
+    .frt_btn:hover & {
+        background: #fff;
+        border-color: #fff;
+        &:before {
+            border-color: $light-blue;
+            background: #fff;
+        }
+        &:after {
+            background: $light-blue;
+        }
+    }
+}
+
+.icon-instagram {
+    border-radius: em(7px);
+    width: em(20px);
+    height: em(20px);
+    border: em(2px) solid $blue;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        width: em(10px);
+        height: em(10px);
+        top: 50%;
+        left: 50%;
+        margin: {
+            top: em(5px)*-1;
+            left: em(5px)*-1;
+        }
+        border-radius: 100%;
+        border: em(2px) solid $blue;        
+    }
+    &:after {
+        border-radius: 100%;
+        height: em(2px);
+        width: em(2px);
+        background-color: $blue;
+        top: em(2px);
+        right: em(2px);
+    }
+    .frt_btn:hover & {
+        border-color: #fff;
+        &:before {
+            border-color: #fff;
+        }
+        &:after {
+            background-color: #fff;
+        }
+    }
+}
+
+   

@@ -1,0 +1,97 @@
+.arrow {
+    width: em(20px);
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+    height: em(20px);
+    transition: transform $speed;
+    display: inline-block;
+    &:before, &:after {
+        width: em(11px);
+        content: '';
+        height: $border_h;
+        position: absolute;
+        background-color: $blue;
+        top: 50%;
+        transition: background-color $speed;
+    }
+    &:before {
+        transform: rotate(-45deg) translateZ(0);
+    }
+    &:after {
+        transform: rotate(45deg) translateZ(0);
+    }
+    &-line {
+        height: $border_h;
+        background-color: $blue;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: ($border_h/2)*-1;
+        transition: background-color $speed;
+    }
+    &-prev {
+        left: 0;
+        &:before, &:after {
+            left: 0;
+            transform-origin: left center;
+        }
+        &:before {
+            margin-top: -1px;
+        }
+        &:after {
+            margin-top: -3px;
+        }
+        &:hover:not(.inactive) {
+            transform: translate3d(#{em(10px)}, -50%, 0);
+        }
+    }
+    &-next {
+        right: 0;
+        &:before, &:after {
+            right: 0;
+            transform-origin: right center;
+        }
+        &:before {
+            margin-top: -3px;
+        }
+        &:after {
+            margin-top: -1px;
+        }
+        &:hover:not(.inactive) {
+            transform: translate3d(-#{em(10px)}, -50%, 0);
+        }
+    }
+    &.overlay {
+        .arrow-line, &:before, &:after {
+            background-color: white;
+        }
+    }
+    &.inactive {
+        cursor: auto;
+        opacity: .35;
+    }
+    &:hover:not(.inactive) {
+        &:before, &:after, .arrow-line {
+            background-color: $light-blue;
+        }
+    }
+    &-down {
+        position: relative;
+        top: 0;
+        transform: translate3d(0,0,0);
+        .arrow-line {
+            transform: rotate(90deg);
+        }
+        &:before, &:after {
+            top: auto;
+            bottom: 2px;
+        }
+        &:before {
+            right: 2px;
+        }
+        &:after {
+            left: 2px;
+        }
+    }
+}

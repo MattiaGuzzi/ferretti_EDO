@@ -1,30 +1,30 @@
 .frt_instagram{
-  @include displayFlex();
-  flex-wrap: wrap;
-  &_item {
-    position: relative;
-    flex: 0 0 auto;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 100%/$golden-ratio;
-    img {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      height: auto;
-      transform: translate3d(0, -50%, 0);
+    display: flex;
+    flex-wrap: wrap;
+    &_item {
+        position: relative;
+        flex: 0 0 auto;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 100%/$golden-ratio;
+        img {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: auto;
+            transform: translate3d(0, -50%, 0);
+        }
+        @include breakpoint(1366px/$golden-ratio) {
+            width: 50%;
+            padding-top: 50%/$golden-ratio;
+        }
     }
-    @include breakpoint(1366px/$golden-ratio) {
-      width: 50%;
-      padding-top: 50%/$golden-ratio;
+    .frt_btn {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 2;
+        position: absolute;
+        margin: 0;
     }
-  }
-  .frt_btn {
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    z-index: 2;
-    position: absolute;
-    margin: 0;
-  }
 }

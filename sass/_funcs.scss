@@ -1,0 +1,181 @@
+@function rem($px, $base: $base_font_size) {
+    @return ($px / $base) * 1rem;
+}
+
+@function em($px, $base: $base_font_size) {
+    @return ($px / $base) * 1em;
+}
+
+@function vw($target) { 
+    $vw-context: (1024*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+}
+
+@function vh($target) { 
+    $vw-context: (768*.01) * 1px;
+    @return ($target/$vw-context) * 1vh;
+}
+
+@function vmax($target) { 
+    $vw-context: (1440*.01) * 1px;
+    @return ($target/$vw-context) * 1vmax;
+}
+
+@mixin clearfix {
+	zoom: 1;
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@function pad($val, $isDist: true) {
+    @if $isDist {
+        @return em($dist * $val);
+    } @else {
+        @return em($val);
+    }
+}
+
+@mixin breakpoint($point) {
+    @media screen and (min-width: #{em($point)}) {
+        @content;
+    }
+}
+
+@mixin grid($max, $points) {
+    .grid-#{$max} {
+        @for $i from 1 through $max - 1 {
+            @include breakpoint($points) {
+                .col-#{$i} {
+                    width: percentage($i/$max);
+                    flex: 0 0 auto;
+                    //flex: 0 0 #{percentage($i/$max)};
+                }
+            }
+        }
+    }
+}
+
+@mixin gradient($inv : false) {
+    height: em(3px);
+    @if $inv {
+        background: linear-gradient(to left, $c 0, $y 100%);
+    } @else {
+        background: linear-gradient(to right, $c 0, $y 100%);
+    }
+}
+
+@mixin position($pos : absolute, $top : null, $left : null, $right : null, $bottom : null, $w : null, $h : null) {
+    position: $pos;
+    @if $top != null {
+        top: $top;
+    }
+    @if $bottom != null {
+        bottom: $bottom;
+    }
+    @if $left != null {
+        left: $left;
+    }
+    @if $right != null {
+        right: $right;
+    }
+    @if $w != null {
+        width: $w;
+    }
+    @if $h != null {
+        height: $h;
+    }
+}
+
+@mixin absfull() {
+    @include position($w : $f, $h : $f, $top : 0, $left : 0);
+}
+
+@mixin flex($display : true, $col : false, $ai : null, $ac : null, $jc : null, $wrap : false, $self : null, $flex : null) {
+    @if $display {
+        display: flex;
+    }
+    @if $col {
+        flex-direction: column;
+    }
+    @if $wrap {
+        flex-wrap: wrap;
+    }
+    @if $ai != null {
+        align-items: $ai;
+    }
+    @if $ac != null {
+        align-content: $ac;
+    }
+    @if $jc != null {
+        justify-content: $jc;
+    }
+    @if $self != null and not $display {
+        align-self: $self;
+    }
+    @if $flex != null and not $display {
+        flex: $flex;
+    }
+}
+
+@mixin padder-center() {
+	@include flex($ai: center, $jc: center, $ac: center);
+}
+
+@mixin hidden($isHidden : true, $onlyTrans : false) {
+    transition: {
+        property: visibility, opacity;
+        duration: $speed;
+    }
+    @if not $onlyTrans{
+        @if $isHidden {
+            visibility: hidden;
+            opacity: 0;
+        } @else {
+            visibility: visible;
+            opacity: 1;
+            transition-duration: $speed/2;
+        }
+    }
+}
+
+@mixin dash($size, $distance, $color) {
+	background: linear-gradient(to left,
+		  $color $size/2, transparent 0,
+		  transparent calc(50% - #{$size/2}), $color 0,
+		  $color calc(50% + #{$size/2}), transparent 0,
+		  transparent calc(100% - #{$size/2}), $color 0), {
+	size: (( $size * 2 )+ $distance) 100%;
+	};
+}
+
+
+@mixin normalize_padding{
+  padding: {
+    left: em(10px);
+    right: em(10px);
+  }
+  @include breakpoint(640px){
+    padding: {
+      left: em(20px);
+      right: em(20px);
+    }
+  }
+  @include breakpoint(850px){
+    padding: {
+      left: em(40px);
+      right: em(40px);
+    }
+  }
+  @include breakpoint(1366px){
+    padding: {
+      left: em(0px);
+      right: em(0px);
+    }
+  }
+}

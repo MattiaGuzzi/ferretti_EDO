@@ -1,47 +1,50 @@
+// COLORS
+@import 'funcs';
+
+$b: #000;
+$w: #fff;
+$r: #e3032e;
+$main_color: #262626;
+$blue: #002a50;
+$light_blue: #0086ff;
+$dark_grey: #595959;
+$grey: #999999;
+$light_grey: #acacac;
+$light-color: #595959;
+$soft-color: #f0efef;
+$border-color: darken($w, 15%);
+$c: #00A1B0;
+$y: #FAD755;
+$o: #ffaf00;
+$v: #628c01;
+$blog : #0069b4;
+$about : #90462a;
+$frt_btn_border_color: #262626;
+$main_font_size: 16px;
+$secondary_font: "sofia-pro", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$main_font: "museo-sans", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$letter-spacing: 0.2em;
+$letter-spacing-paragraph: 0.072em;
+$letter-spacing-btn: 0.2em;
+$interline_paragraph: percentage(38px/24px); 
+$interline_title:percentage(38px/24px);
+$letter-spacing-title: 0.2em;
+
+// SIZE
+$f: 100%;
+$bp: 850px;
+$dist: 10px;
+$speed: 0.5s;
+$golden-ratio: 1.61803398875;
+$border_h: 4px;
+$first_percent : $f/$golden-ratio;
+$second_percent : $f/$golden-ratio/$golden-ratio;
+
 $max-width: 1366px;
 $width_max_site: 100%;
-$border_h: 4px;
-$golden-ratio: 1.61803398875;
 $storia_padding: percentage(130px/410px);
-$vb: 850px;
+$vb: $bp;
 
-.storia {
-  .content_bubble {
-    .frt_title:nth-of-type(1) {
-      padding-bottom: $storia_padding;
-      line-height: 1;
-    }
-  }
-}
+@import 'extends';
 
-
-@mixin normalize_padding{
-  padding: {
-    left: em(10px);
-    right: em(10px);
-  }
-  @include breakpoint(640px){
-    padding: {
-      left: em(20px);
-      right: em(20px);
-    }
-  }
-  @include breakpoint(850px){
-    padding: {
-      left: em(40px);
-      right: em(40px);
-    }
-  }
-  @include breakpoint(1366px){
-    padding: {
-      left: em(0px);
-      right: em(0px);
-    }
-  }
-
-}
-
-
-.offset{
-
-}
