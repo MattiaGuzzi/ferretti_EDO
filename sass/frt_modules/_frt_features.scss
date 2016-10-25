@@ -12,6 +12,11 @@
       padding-bottom: em(20px);
     }
     .label_features{
+      font-family: $secondary_font;
+      letter-spacing: $letter-spacing;
+      color: $light_blue;
+      text-transform: uppercase;
+      font-weight: 600;
       font-size: em(12px);
       text-align: center;
       padding: 0 em(40px) em(40px) em(40px);
@@ -24,13 +29,22 @@
 
   &_title{
     margin:0px;
+    font-size: em(24px);
+    font-family: $secondary_font;
+    font-weight: 600;
+    letter-spacing: $letter-spacing;
+    color: $main_color;
   }
   p{
     font-family: $main_font;
     letter-spacing: $letter-spacing-paragraph;
-    color: $dark_grey;
-    margin-top: 0.625em;
-    font-size: 0.9em;
+    color: $main_color;
+    font-size: em(16px);
+    margin-bottom: em(40px);
+    line-height: $interline_paragraph;
+  }
+  p:last-child{
+    margin-bottom: 0px;
   }
 }
 

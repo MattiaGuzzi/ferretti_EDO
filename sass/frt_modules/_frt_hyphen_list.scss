@@ -18,7 +18,18 @@ ul.list{
       left:0px;
 
     }
+
+    .attributes &{
+      font-family: $secondary_font;
+      font-size: em(16px);
+      letter-spacing: $letter-spacing;
+      color: $light_blue;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
   }
+
 }
 
 .signature {

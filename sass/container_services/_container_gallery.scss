@@ -1,0 +1,26 @@
+
+.frt_gallery {
+
+  align-items: center;
+
+  [class^="cols_"],[class*=" cols_"]{
+    position: relative;
+  }
+  .cols_40{
+
+  }
+  .second_gallery {
+    position: relative;
+    padding-top: percentage(260px/792px);
+    width:100%;
+    .frt_img {
+      width:100%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.frt_img {
+
+}

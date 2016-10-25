@@ -14,35 +14,28 @@ $width_gallery_appartamenti: 100%;
   position: relative;
   height: $height_subheader;
   width: 100%;
-  z-index: 9999999;
+  z-index: 9999;
 }
 
 .slider_app_in_vendita{
-  margin-bottom: 3.125em!important;
+  margin-bottom: 3.125em;
 }
 
 
 .descrizione_appartamenti{
   position: relative;
-  width: $width_descrizione_appartamenti;
 
-  &.section{
-    margin-bottom: $margin_bottom;
-  }
 }
 
 .caratteristiche_appartamenti{
   position: relative;
-  width: $width_caratteristiche_appartamenti;
+
 }
 
 
 .gallery_appartamenti{
   position: relative;
-  width: $width_gallery_appartamenti;
-  &.section{
-    margin-bottom: 3.125em!important;
-  }
+
 }
 
 .pubblicita_appartamenti{
@@ -51,10 +44,10 @@ $width_gallery_appartamenti: 100%;
 
 .appuntamento_btn{
   position: relative;
-  width: 100%;
+
 }
 
 .immobili_simili{
   position: relative;
-  width: 100%;
+
 }

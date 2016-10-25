@@ -50,24 +50,21 @@
 
 
 .image_wrapper {
+  position: relative;
   img {
     display: block;
     width: 100%;
   }
-  .btn{
+  .frt_btn{
     position: absolute;
-    width: 100%;
-    padding-left: 0px;
+    margin:0;
+    left: 50%;
     bottom: 0;
-    transform: translateY(50%);
+    transform: translateX(-50%) translateY(50%);
     z-index: 3;
   }
 }
-.frt_paragraph{
-  .frt_paragraph_wrapper{
-    height: 100%;
-  }
-}
+
 
 
 

@@ -36,7 +36,7 @@ strong {
 }
 
 .font_thin {
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .font_medium{
@@ -49,7 +49,7 @@ strong {
 .frt_text{
     font-family: $main_font;
     font-size: em(16px);
-    font-weight: 100;
+    font-weight: 300;
     line-height: $interline_paragraph;
     letter-spacing: $letter-spacing-paragraph;
     color: $dark_grey;
@@ -69,12 +69,21 @@ strong {
     &_force_secondary_font{
         font-family: $secondary_font;
     }
+
+    .appuntamento_btn &{
+        font-size: em(16px);
+        margin-top: em(30px);
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        color: $main_color;
+    }
 }
 
 
 .frt_title{
     font-size: em(30px);
-    font-weight: 100;
+    font-weight: 200;
     font-family: $secondary_font;
     text-transform: uppercase;
     letter-spacing: $letter-spacing-title;
@@ -85,25 +94,26 @@ strong {
 
 
     &_smaller{
-        font-size: em(18px)!important;
+        font-size: em(18px);
     }
     &_small{
-        font-size: em(24px)!important;
+        font-size: em(24px);
     }
     &_medium{
-        font-size: em(30px)!important;
+        font-size: em(30px);
     }
     &_big{
-        font-size: em(36px)!important;
+        font-size: em(36px);
     }
     &_bigger{
-        font-size: em(48px)!important;
+        font-size: em(48px);
     }
     .header-section & {
         font-size: em(48px);
         color:$blue;
         letter-spacing: $letter-spacing-paragraph;
         text-align: center;
+        margin-bottom: em(40px, 48px);
 
         strong{
             color: $light_blue;
@@ -114,8 +124,61 @@ strong {
         background-color: transparent;
         color: $light_blue;
     }
+
+    .appuntamento_btn &{
+        font-size: em(30px);
+        text-align: center;
+        margin-bottom: em(30px, 30px);
+        line-height: 1;
+        color: $blue;
+        font-weight: 600;
+    }
 }
 
+.title_schedule{
+    font-family: $secondary_font;
+    font-size: em(18px);
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-title;
+    color: $blue;
+    font-weight: 600;
+    margin-bottom:20px;
+    line-height: 1;
+}
+.address_schedule{
+    font-family: $main_font;
+    font-size: em(14px);
+    letter-spacing: $letter-spacing;
+    color: $main_color;
+    font-weight: 300;
+    margin-bottom:23px;
+    line-height: 1;
+}
+.price{
+    font-family: $secondary_font;
+    font-weight: 600;
+    letter-spacing: $letter-spacing;
+    color: $main_color;
+    line-height: 1;
+
+    .cols_33 &{
+        margin-bottom:30px;
+        font-size: em(16px);
+    }
+
+    .corner & {
+        font-size: em(24px);
+    }
+}
+.label_details{
+    font-family: $secondary_font;
+    font-size: em(12px);
+    letter-spacing: $letter-spacing;
+    color: $light_blue;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+}
 
 
 
@@ -150,7 +213,7 @@ strong {
 .number_servizi {
     color: $light_grey;
     letter-spacing: $letter-spacing-paragraph;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .star {
@@ -208,7 +271,7 @@ strong {
 
 .secondary_font_100 {
     font-family: $secondary_font!important;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .secondary_font_200 {
@@ -257,3 +320,4 @@ strong {
 .white {
     color: white !important;
 }
+
