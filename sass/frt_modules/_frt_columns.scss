@@ -12,7 +12,6 @@
         width: 100%;
         flex: 0 0 auto;
         display: flex;
-        align-items: center;
     }
     @include breakpoint(640px) {
         .cols_50 {
@@ -25,9 +24,11 @@
     @include breakpoint($bp) {      
         .cols_60 {
             width: $first_percent;
+            align-items: center;
         }
         .cols_40 {
             width: $second_percent;
+            align-items: center;
         }
         .cols_33 {
             width:$f/3;
@@ -61,4 +62,14 @@
 
 .cols_meta{
    text-align: center;
+}
+
+.property_list{
+    align-items: flex-start;
+    [class^="cols_"], [class*=" cols_"]{
+        flex-direction: column;
+    }
+    .frt_paragraph{
+        flex: 10 1 auto;
+    }
 }

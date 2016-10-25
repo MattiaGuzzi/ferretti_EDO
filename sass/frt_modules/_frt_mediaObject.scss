@@ -49,6 +49,27 @@
 }
 
 
+.image_wrapper {
+  img {
+    display: block;
+    width: 100%;
+  }
+  .btn{
+    position: absolute;
+    width: 100%;
+    padding-left: 0px;
+    bottom: 0;
+    transform: translateY(50%);
+    z-index: 3;
+  }
+}
+.frt_paragraph{
+  .frt_paragraph_wrapper{
+    height: 100%;
+  }
+}
+
+
 
 
 

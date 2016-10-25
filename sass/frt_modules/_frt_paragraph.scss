@@ -13,6 +13,7 @@ $frt_paragraph_animation_time: 0.4s;
 
 .frt_paragraph{
   width: 100%;
+  position: relative;
 
   &:before {
     background-image: url("../img/strips.png");
