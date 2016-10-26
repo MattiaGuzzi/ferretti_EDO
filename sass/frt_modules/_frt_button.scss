@@ -2,115 +2,23 @@ $frt_btn_padding_desktop: em(20px) em(40px);
 $frt_btn_padding_mobile: em(10px) em(20px);
 
 $frt_btn_border_thickness: 0.20em;
-$frt_btn_border_color: #262626;
+$frt_btn_border_color: $main_color;
 $frt_btn_2nd_border_thickness: 0.313em;
 
 $frt_btn_animation: ease-out;
 $frt_btn_animation_time: 0.4s;
 
-/*.frt_btn_wrapper{
-
-  background-image: url("../img/strips.png");
-  position:relative;
-  -webkit-transition: all $frt_btn_animation_time $frt_btn_animation;
-  -moz-transition: all $frt_btn_animation_time $frt_btn_animation;
-  -o-transition: all $frt_btn_animation_time $frt_btn_animation;
-  transition: all $frt_btn_animation_time $frt_btn_animation;
-  z-index: 2;
-  .frt_btn{
-    border: solid $frt_btn_border_thickness $frt_btn_border_color;
-    padding:$frt_btn_padding_70h;
-    background-color:white;
-    position:relative;
-    top:$frt_btn_2nd_border_thickness*(-1);
-    left:$frt_btn_2nd_border_thickness;
-    width: 100%;
-    text-transform: uppercase;
-
-    .label_button {
-      text-transform: uppercase;
-      font-size: 0.875em;
-      font-weight: 400;
-      letter-spacing: $letter-spacing-btn;
-    }
-
-    .icon_button {
-      font-size: 1.875em;
-      color: $blue;
-      margin-right: 0.5em;
-    }
-
-  }
-
-  &:hover{
-    background-color: #000000;
-
-
-    .frt_btn{
-      border-color: #0086ff;
-      background-color: #0086ff;
-      color: white;
-
-      .label_button{
-        color: white;
-      }
-      .icon_button{
-        color: white;
-      }
-    }
-
-  }
-
-
-  !*
-             _   _
-  ___  _ __ | |_(_) ___  _ __  ___
- / _ \| '_ \| __| |/ _ \| '_ \/ __|
-| (_) | |_) | |_| | (_) | | | \__ \
- \___/| .__/ \__|_|\___/|_| |_|___/
-      |_|
-
- *!
-
-  &.active{
-    .frt_btn {
-      border-color: #fff !important;
-    }
-    .label_button{
-      @extend .font_thin;
-    }
-  }
-
-
-
-
-  &._400px{
-    width: 400px;
-  }
-
-  &._240px{
-    width: 15.000em;
-  }
-
-  &._200px{
-    width: 200px;
-  }
-
-}*/
+[ng-click] {
+    cursor: pointer;
+}
 
 .container_button {
   position: relative;
-/*  padding-left: em(20px);*/
 
   &_center {
     @include padder-center;
     flex-wrap: wrap;
   }
- /* &_right{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }*/
 
 }
 
@@ -130,17 +38,22 @@ $frt_btn_animation_time: 0.4s;
     margin: em(20px) em(40px);
   }
 
-  .PADDER-CENTER {
+  .btn_wrapper {
     border: solid $frt_btn_border_thickness $frt_btn_border_color;
-    padding: $frt_btn_padding_mobile;
-    background-color: white;
-    position: relative;
-    text-transform: uppercase;
-    z-index: 2;
-
-    @include breakpoint(800px) {
-      padding: $frt_btn_padding_desktop;
-    }
+        padding: $frt_btn_padding_mobile;
+        background-color: white;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 2;
+        line-height: 1;
+        transition: {
+            duration: $speed;
+            property: background-color;
+        }
+        @include padder-center;
+        @include breakpoint($bp) {
+            padding: $frt_btn_padding_desktop;
+        }
   }
 
   &:before {
@@ -174,7 +87,7 @@ $frt_btn_animation_time: 0.4s;
     height: 100%;
   }
   &:hover {
-    .PADDER-CENTER {
+    .btn_wrapper {
       background-color: $light_blue;
       border-color: $light_blue;
       color: white;
@@ -187,7 +100,7 @@ $frt_btn_animation_time: 0.4s;
     &:before {
       opacity: 0;
     }
-    .icon_button{
+    .icon_button, .label_button {
       color: white;
     }
   }
@@ -199,7 +112,7 @@ $frt_btn_animation_time: 0.4s;
   font-weight: bold;
   letter-spacing: $letter-spacing-btn;
   text-align: left;
-
+  color: $main_color;
   @include breakpoint(640px){
     font-size: em(13px);
   }
@@ -215,6 +128,8 @@ $frt_btn_animation_time: 0.4s;
   font-size: em(20px);
   color: $blue;
   margin-right: em(20px, 20px);
+  position: relative;
+  flex: 0 0 auto;
   @include breakpoint(640px){
     font-size: em(21px);
     margin-right: em(20px, 21px);
@@ -230,4 +145,86 @@ $frt_btn_animation_time: 0.4s;
 }
 
 
+
+
+.icon-facebook {
+    background: $blue;
+    width: em(20px);
+    height: em(20px);
+    border-radius: em(2px);
+    border: em(3px) solid $blue;
+    border-bottom: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        background: $blue;
+        width: em(8px);
+        height: em(20px);
+        top: em(3px);
+        right: em(4px)*-1;
+        border: em(2px) solid #fff;
+        border-radius: em(3px);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: em(6px);
+        top: 50%;
+        height: em(2px);
+        background: #fff;
+        right: 0;
+        margin-top: -1px;
+    }
+    .frt_btn:hover & {
+        background: #fff;
+        border-color: #fff;
+        &:before {
+            border-color: $light-blue;
+            background: #fff;
+        }
+        &:after {
+            background: $light-blue;
+        }
+    }
+}
+
+.icon-instagram {
+    border-radius: em(7px);
+    width: em(20px);
+    height: em(20px);
+    border: em(2px) solid $blue;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        width: em(10px);
+        height: em(10px);
+        top: 50%;
+        left: 50%;
+        margin: {
+            top: em(5px)*-1;
+            left: em(5px)*-1;
+        }
+        border-radius: 100%;
+        border: em(2px) solid $blue;        
+    }
+    &:after {
+        border-radius: 100%;
+        height: em(2px);
+        width: em(2px);
+        background-color: $blue;
+        top: em(2px);
+        right: em(2px);
+    }
+    .frt_btn:hover & {
+        border-color: #fff;
+        &:before {
+            border-color: #fff;
+        }
+        &:after {
+            background-color: #fff;
+        }
+    }
+}
 

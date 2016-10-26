@@ -1,8 +1,10 @@
 body {
     padding-top: em(70px);
     font-size: 13px;
-    font-family: $secondary_font;
+    font-family: $main_font;
     color: $main_color;
+    line-height: $interline_paragraph;
+    font-weight: 300;
     @include breakpoint(800px) {
         font-size: 14px;
     }
@@ -18,6 +20,10 @@ a {
 
 h1,h2,h3,h4,h5,h6,p{
     margin:0;
+}
+
+[class^="frt_icon"], [class*=" frt_icon"] {
+    color: $blue;
 }
 
 .frt_paragraph_content, .post-content {
@@ -50,7 +56,6 @@ strong {
     font-family: $main_font;
     font-size: em(16px);
     font-weight: 300;
-    line-height: $interline_paragraph;
     letter-spacing: $letter-spacing-paragraph;
     color: $dark_grey;
     &_smaller{
@@ -87,12 +92,10 @@ strong {
     font-family: $secondary_font;
     text-transform: uppercase;
     letter-spacing: $letter-spacing-title;
-    line-height: $interline_title;
+    line-height: $interline_paragraph;
     &.cover_title{
         color: white;
     }
-
-
     &_smaller{
         font-size: em(18px);
     }
@@ -114,18 +117,17 @@ strong {
         letter-spacing: $letter-spacing-paragraph;
         text-align: center;
         margin-bottom: em(40px, 48px);
-
         strong{
             color: $light_blue;
         }
     }
-    mark{
+    mark {
         display: block;
         background-color: transparent;
         color: $light_blue;
     }
 
-    .appuntamento_btn &{
+    .appuntamento_btn & {
         font-size: em(30px);
         text-align: center;
         margin-bottom: em(30px, 30px);
@@ -144,14 +146,27 @@ strong {
     font-weight: 600;
     margin-bottom:20px;
 }
-.address_schedule{
-    font-family: $main_font;
+.address {
     font-size: em(14px);
     letter-spacing: $letter-spacing;
     color: $main_color;
-    font-weight: 300;
-    margin-bottom:23px;
+    padding-bottom: em(24px, 14px);
     line-height: 1;
+    .cols_60 & {
+        font-size: em(18px);
+        font-family: $secondary_font;   
+        padding-top: em(18px, 18px);
+        padding-bottom: em(36px, 18px);
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        letter-spacing: $letter-spacing;
+    }
+    .frt_icon-marker {
+        font-size: em(24px, 18px);
+        color: $blue;
+        padding-right: em(10px, 24px);
+    }
 }
 .price{
     font-family: $secondary_font;
@@ -159,7 +174,6 @@ strong {
     letter-spacing: $letter-spacing;
     color: $main_color;
     line-height: 1;
-
     .cols_33 &{
         margin-bottom:30px;
         font-size: em(16px);
@@ -320,3 +334,4 @@ strong {
     color: white !important;
 }
 
+@import 'fonts';

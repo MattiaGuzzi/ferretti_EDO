@@ -1,125 +1,129 @@
 .frt_columns {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  &_jcenter {
-    justify-content: center;
-  }
-  &.carousel_wrapper {
-    flex-wrap: nowrap;
-  }
-  [class^="cols_"], [class*=" cols_"] {
-    width: 100%;
-    flex: 0 0 auto;
     display: flex;
-  }
-  @include breakpoint(640px) {
-    .cols_50, .cols_33 {
-      width: 50%;
+    flex-wrap: wrap;
+    width: 100%;
+    &_jcenter {
+        justify-content: center;
     }
-    .cols_25 {
-      width: 25%;
+    &.carousel_wrapper {
+        flex-wrap: nowrap;
     }
-  }
-  @include breakpoint($bp) {
-    .cols_60 {
-      width: $first_percent;
-      align-items: center;
+    [class^="cols_"], [class*=" cols_"] {
+        width: 100%;
+        flex: 0 0 auto;
+        display: flex;
     }
-    .cols_40 {
-      width: $second_percent;
-      align-items: center;
+    @include breakpoint(640px) {
+        .cols_50, .cols_33 {
+            width: 50%;
+        }
+        .cols_25 {
+            width: 25%;
+        }
     }
-    .cols_33 {
-      width: $f/3;
+    @include breakpoint($bp) {
+        .cols_60 {
+            width: $first_percent;
+            align-items: center;
+        }
+        .cols_40 {
+            width: $second_percent;
+            align-items: center;
+        }
+        .cols_33 {
+            width: $f/3;
+        }
     }
-  }
-  .cols_100 {
-    &_start {
-      justify-content: flex-start;
+    .cols_100 {
+        &_start {
+            justify-content: flex-start;
+        }
     }
-  }
 }
 
 .offset {
-  @include breakpoint($bp) {
-    padding: {
-      left: em(40px);
-      right: em(40px);
+    @include breakpoint($bp) {
+        padding: {
+            left: em(40px);
+            right: em(40px);
+        }
+        &-left {
+            padding: {
+                left: em(40px);
+            }
+        }
+        &-right {
+            padding: {
+                left: em(40px);
+            }
+        }
     }
-    &-left {
-      padding: {
-        left: em(40px);
-      }
-    }
-    &-right {
-      padding: {
-        left: em(40px);
-      }
-    }
-  }
 }
 
 .cols_meta {
-  text-align: center;
+    text-align: center;
+    flex-wrap: wrap;
+    > * {
+        width: $f;
+    }
 }
 
 .property_list {
-  justify-content: center;
+    justify-content: center;
 
-  [class^="cols_"], [class*=" cols_"] {
-    flex-direction: column;
-  }
-  .frt_paragraph {
-    display: flex;
-    flex: 10 1 auto;
-  }
-
-  .cols_33 {
-    $cazzovuoi: 40px/3;
-    $padding: 40px - $cazzovuoi;
-
-    @include breakpoint(640px) {
-      &:nth-child(2n+1) {
-        padding-right: em($padding);
-      }
-      &:nth-child(2n+2) {
-        padding-left: em($padding);
-      }
+    [class^="cols_"], [class*=" cols_"] {
+        flex-direction: column;
+    }
+    .frt_paragraph {
+        display: flex;
+        flex: 10 1 auto;
     }
 
-    @include breakpoint($bp) {
-      &:nth-child(2n+1) {
-        padding-right: 0px;
-      }
-      &:nth-child(2n+2) {
-        padding-left: 0px;
-      }
+    .cols_33 {
+        $cazzovuoi: 40px/3;
+        $padding: 40px - $cazzovuoi;
 
-      &:nth-child(3n+1) {
-        padding-right: em($padding);
-      }
-      &:nth-child(3n+2) {
-        padding-right: em($cazzovuoi);
-        padding-left: em($cazzovuoi);
-      }
-      &:nth-child(3n+3) {
-        padding-left: em($padding);
-      }
+        @include breakpoint(640px) {
+            &:nth-child(2n+1) {
+                padding-right: em($padding);
+            }
+            &:nth-child(2n+2) {
+                padding-left: em($padding);
+            }
+        }
+
+        @include breakpoint($bp) {
+            &:nth-child(2n+1) {
+                padding-right: 0px;
+            }
+            &:nth-child(2n+2) {
+                padding-left: 0px;
+            }
+
+            &:nth-child(3n+1) {
+                padding-right: em($padding);
+            }
+            &:nth-child(3n+2) {
+                padding-right: em($cazzovuoi);
+                padding-left: em($cazzovuoi);
+            }
+            &:nth-child(3n+3) {
+                padding-left: em($padding);
+            }
+        }
     }
-  }
 }
 
 
 .details{
-  width: 50%;
-  display: flex;
-  align-items: center;
-  margin-bottom:23px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom:23px;
 }
 
 .attributes{
-  width: 50%;
-  display: flex;
-  align-items: center;
+    width: 50%;
+    display: flex;
+    align-items: center;
 }
