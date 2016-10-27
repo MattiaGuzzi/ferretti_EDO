@@ -13,33 +13,33 @@ $frt_btn_animation_time: 0.4s;
 }
 
 .container_button {
-  position: relative;
+    position: relative;
 
-  &_center {
-    @include padder-center;
-    flex-wrap: wrap;
-  }
+    &_center {
+        @include padder-center;
+        flex-wrap: wrap;
+    }
 
 }
 
 .frt_btn {
-  position: relative;
-  z-index: 1;
-  border: 0;
-  padding: 0;
-  margin: em(10px);
-  transition: {
-    property: background-color, border-color;
-    duration: .5s;
-  }
+    position: relative;
+    z-index: 1;
+    border: 0;
+    padding: 0;
+    margin: em(10px);
+    transition: {
+        property: background-color, border-color;
+        duration: .5s;
+    }
 
 
-  @include breakpoint(800px) {
-    margin: em(20px) em(40px);
-  }
+    @include breakpoint(800px) {
+        margin: em(20px) em(40px);
+    }
 
-  .btn_wrapper {
-    border: solid $frt_btn_border_thickness $frt_btn_border_color;
+    .btn_wrapper {
+        border: solid $frt_btn_border_thickness $frt_btn_border_color;
         padding: $frt_btn_padding_mobile;
         background-color: white;
         position: relative;
@@ -54,94 +54,94 @@ $frt_btn_animation_time: 0.4s;
         @include breakpoint($bp) {
             padding: $frt_btn_padding_desktop;
         }
-  }
+    }
 
-  &:before {
-    content: "";
-    background: linear-gradient(-45deg,
+    &:before {
+        content: "";
+        background: linear-gradient(-45deg,
             #000 1px, transparent 0,
             transparent calc(50% - 1px), #000 0,
             #000 calc(50% + 1px), transparent 0,
             transparent calc(100% - 1px), #000 0);
-    background-size: 6px/sqrt(2) 6px/sqrt(2);
-    position: absolute;
-    bottom: $frt_btn_2nd_border_thickness*(-1);
-    left: $frt_btn_2nd_border_thickness*(-1);
-    width: 100%;
-    height: 100%;
-    opacity: 0.25;
-    transition:opacity 0.5s;
-  }
-
-  &:after {
-    content: "";
-    bottom: 0;
-    left: 0;
-    background: #000006;;
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 1;
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-  }
-  &:hover {
-    .btn_wrapper {
-      background-color: $light_blue;
-      border-color: $light_blue;
-      color: white;
+        background-size: 6px/sqrt(2) 6px/sqrt(2);
+        position: absolute;
+        bottom: $frt_btn_2nd_border_thickness*(-1);
+        left: $frt_btn_2nd_border_thickness*(-1);
+        width: 100%;
+        height: 100%;
+        opacity: 0.25;
+        transition:opacity 0.5s;
     }
+
     &:after {
-      opacity: 1;
-      bottom: $frt_btn_2nd_border_thickness*(-1.5);
-      left: $frt_btn_2nd_border_thickness*(-1.5);
+        content: "";
+        bottom: 0;
+        left: 0;
+        background: #000006;;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: 1;
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
     }
-    &:before {
-      opacity: 0;
+    &:hover {
+        .btn_wrapper {
+            background-color: $light_blue;
+            border-color: $light_blue;
+            color: white;
+        }
+        &:after {
+            opacity: 1;
+            bottom: $frt_btn_2nd_border_thickness*(-1.5);
+            left: $frt_btn_2nd_border_thickness*(-1.5);
+        }
+        &:before {
+            opacity: 0;
+        }
+        .icon_button, .label_button {
+            color: white;
+        }
     }
-    .icon_button, .label_button {
-      color: white;
-    }
-  }
 }
 
 .label_button {
-  font-size: em(16px);
-  font-family: $secondary_font;
-  font-weight: bold;
-  letter-spacing: $letter-spacing-btn;
-  text-align: left;
-  color: $main_color;
-  @include breakpoint(640px){
-    font-size: em(13px);
-  }
-  @include breakpoint(800px){
-    font-size: em(14px);
-  }
-  @include breakpoint(1024px){
     font-size: em(16px);
-  }
+    font-family: $secondary_font;
+    font-weight: bold;
+    letter-spacing: $letter-spacing-btn;
+    text-align: left;
+    color: $main_color;
+    @include breakpoint(640px){
+        font-size: em(13px);
+    }
+    @include breakpoint(800px){
+        font-size: em(14px);
+    }
+    @include breakpoint(1024px){
+        font-size: em(16px);
+    }
 }
 
 .icon_button {
-  font-size: em(20px);
-  color: $blue;
-  margin-right: em(20px, 20px);
-  position: relative;
-  flex: 0 0 auto;
-  @include breakpoint(640px){
-    font-size: em(21px);
-    margin-right: em(20px, 21px);
-  }
-  @include breakpoint(800px){
-    font-size: em(22px);
-    margin-right: em(20px, 22px);
-  }
-  @include breakpoint(1024px){
-    font-size: em(24px);
-    margin-right: em(20px, 24px);
-  }
+    font-size: em(20px);
+    color: $blue;
+    margin-right: em(20px, 20px);
+    position: relative;
+    flex: 0 0 auto;
+    @include breakpoint(640px){
+        font-size: em(21px);
+        margin-right: em(20px, 21px);
+    }
+    @include breakpoint(800px){
+        font-size: em(22px);
+        margin-right: em(20px, 22px);
+    }
+    @include breakpoint(1024px){
+        font-size: em(24px);
+        margin-right: em(20px, 24px);
+    }
 }
 
 
@@ -154,6 +154,7 @@ $frt_btn_animation_time: 0.4s;
     border-radius: em(2px);
     border: em(3px) solid $blue;
     border-bottom: 0;
+    overflow: hidden;
     &:before {
         content: "";
         position: absolute;
