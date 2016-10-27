@@ -29,6 +29,13 @@ $frt_img_big_canvas_size: 30px;
       top: $border_h;
       left: $border_h;
     }
+    &.nocanvas{
+      &:before {
+        content: "";
+        background-image: none;
+
+      }
+    }
 
     &.large {
       &:after {
@@ -72,7 +79,7 @@ $frt_img_big_canvas_size: 30px;
       }
     }
 
-    &.nocanvas {
+   /* &.nocanvas {
       background-image: none !important;
       .frt_img_wrapper {
 
@@ -87,7 +94,7 @@ $frt_img_big_canvas_size: 30px;
         }
       }
     }
-
+*/
     &.bigcanvas {
 
       .frt_img_wrapper {

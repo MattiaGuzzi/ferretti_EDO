@@ -135,6 +135,13 @@ strong {
         color: $blue;
         font-weight: 600;
     }
+    .carousel_cantieri & {
+        font-size: em(44px);
+        font-weight: 600;
+        text-align: right;
+        line-height: 1;
+        color: #000;
+    }
 }
 
 .title_schedule{
@@ -333,5 +340,4 @@ strong {
 .white {
     color: white !important;
 }
-
 @import 'fonts';

@@ -32,6 +32,10 @@
         }
         .cols_33 {
             width: $f/3;
+
+            .container_schedule &{
+                padding-bottom: em(80px);
+            }
         }
     }
     .cols_100 {

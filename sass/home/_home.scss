@@ -40,7 +40,7 @@ $height_footer: 3.125em;
 .slider {
   position: relative;
   width: $width_slider;
-  @extend .section;
+
 }
 
 .intro {
@@ -64,48 +64,46 @@ $height_footer: 3.125em;
   }
 }
 
-.carousel {
+.gallery_home {
   position: relative;
-  width: $width_carousel;
-  height: 46.25em;
+
 }
 
 .arredamenti {
   position: relative;
-  width: $width_arredamenti;
+
 }
 
 .frasi {
   position: relative;
   width: $width_frasi;
-  margin: em(80px) 0;
+
 }
 
 .servizi {
   position: relative;
-  width: $width_servizi;
+
 }
 
 .opinioni {
   position: relative;
-  width: $width_opinioni;
-  margin: em(80px) 0;
+
 }
 
 .realizzazioni {
   position: relative;
-  width: $width_realizzazioni;
+
 }
 
 .intestazione {
   position: relative;
-  width: $width_intestazione;
+
 }
 
 .footer {
   position: relative;
   height: $height_footer;
-  width: 100%;
+
 }
 
 
